@@ -38,6 +38,8 @@ public:
     /// \brief Fill all screan with defined color
     /// \param Color color to fill the screen with
     virtual void clear_screen(const Color &fill) = 0;
+
+    virtual ~Renderer() = default;
 };
 
 
