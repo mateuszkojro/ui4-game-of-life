@@ -24,7 +24,10 @@ public:
 
     /// \brief when we create a GameEngine we always need to give it a config
     explicit GameEngine(const GameEngine::Config &config) :
-            current_config(config) {};
+            current_config_(config) {};
+
+    /// \brief game engine will start working
+    virtual void start_engine() final;
 
     /// \brief This function is called on game start
     virtual void on_start() = 0;
@@ -37,6 +40,16 @@ public:
 
     virtual ~GameEngine() = default;
 
+protected:
+    /// \brief start main game loop - now every frame on_tick() will be called
+    void start_game_loop();
+
+    /// \brief stopping the game loop - the on_end() will be called next
+    void stop_game_loop();
+
+private:
+    /// \brief  engine logic happens here
+    void main();
 };
 
 
