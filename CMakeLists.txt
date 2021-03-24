@@ -3,4 +3,4 @@ project(game_of_life)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(game_of_life main.cpp Renderer.h GameEngine.h)
+add_executable(game_of_life main.cc Renderer.h GameEngine.h GameOfLife.cc GameOfLife.h)
