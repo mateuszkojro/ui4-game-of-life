@@ -21,7 +21,19 @@ public:
     ~GameOfLife() override;
 
 private:
-    bool *board;
+    /// \brief Gets value at position from current board
+    bool get_element(int x, int y) const;
+    /// \brief Sets value at position on next_board
+    void set_element(int x, int y, bool value);
+    /// \brief Swaps current_board with next_board to be shown and to prepare for next tick
+    void swap_boards();
+    /// \brief Counts a number of alive cells around cell at position
+    unsigned count_alive_near_position(int x, int y) const;
+
+    /// \brief board that is currently shown on the screen
+    bool* current_board_;
+    ///\brief board that will be shown on the next tick
+    bool* next_board_;
 
 };
 
