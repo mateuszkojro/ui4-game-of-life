@@ -23,6 +23,9 @@ enum class Color {
 /// \brief Basic base class for all renderers.
 class Renderer {
 public:
+
+    /// Reszta API silnika graficznegos
+
     /// \brief Creates window of given size
     /// \param int Size in x dimention
     /// \param int Size in y dimention
