@@ -16,11 +16,16 @@ public:
     /// \return reference to given field
     bool &operator()(int x, int y);
 
+    static Board load_board(const std::string path);
+    static void save_board(const Board&);
+
 public:
 
     Board(bool *board);
 
     Board(const Board &other);
+
+    Board(Board&& other);
 
     const Board &operator=();
 
