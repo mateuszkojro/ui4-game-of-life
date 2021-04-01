@@ -10,6 +10,8 @@
 class Board {
 public:
 
+    Board() = delete;
+
     /// Accesses element of undderyling arr
     /// \param x x coordinate
     /// \param y y coordinate
@@ -33,7 +35,7 @@ public:
 
     Board(Board&& other);
 
-    const Board &operator=();
+    const Board &operator=(const Board&);
 
     virtual ~Board();
 
