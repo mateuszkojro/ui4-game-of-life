@@ -18,7 +18,11 @@ public:
     /// \return reference to given field
     bool &operator()(int x, int y);
 
-    std::array<bool *, 9> get_neighbours();
+    /// Rerturns array of ptrs to neighbours Some might be null
+    /// \param x x coordinate
+    /// \param y y coordinare
+    /// \return array of ptrs to neighbour cells (some might be null)
+    std::array<bool *, 9> get_neighbours(int x, int y);
 
     static Board load_board(const std::string path);
 
