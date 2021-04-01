@@ -23,11 +23,13 @@ public:
 
     void play();
 
+
+
     void set_activation_function(bool (*func)(bool, int));
 
     /// sets the function that will be used to determine if cell shoud be allive
     /// \param func returning bool (if is alive) has params (bool) is currently alive (int) how many
-    // neighbours it has
+    /// neighbours it has
     ~GameOfLife() override;
 
 protected:

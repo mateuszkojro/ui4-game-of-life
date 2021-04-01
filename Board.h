@@ -34,6 +34,8 @@ public:
 
     bool *get_board() const;
 
+
+
 public:
 
     Board(bool *board, size_t x, size_t y);

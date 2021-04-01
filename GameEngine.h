@@ -52,5 +52,9 @@ private:
     void main();
 };
 
+void GameEngine::start_engine() {
+
+}
+
 
 #endif //GAME_OF_LIFE_GAMEENGINE_H
