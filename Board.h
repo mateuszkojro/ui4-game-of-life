@@ -18,8 +18,11 @@ public:
     /// \return reference to given field
     bool &operator()(int x, int y);
 
+    std::array<bool *, 9> get_neighbours();
+
     static Board load_board(const std::string path);
-    static void save_board(const Board&);
+
+    static void save_board(const Board &);
 
     size_t get_size_x() const;
 
@@ -29,13 +32,13 @@ public:
 
 public:
 
-    Board(bool *board, size_t x ,size_t y);
+    Board(bool *board, size_t x, size_t y);
 
     Board(const Board &other);
 
-    Board(Board&& other);
+    Board(Board &&other);
 
-    const Board &operator=(const Board&);
+    const Board &operator=(const Board &);
 
     virtual ~Board();
 
@@ -46,6 +49,7 @@ private:
     /// \param y y coordinate
     /// \return addres in underlying arr
     size_t translate_adress(int x, int y);
+
     size_t size_x_;
     size_t size_y_;
 
