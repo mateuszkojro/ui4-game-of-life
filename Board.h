@@ -19,9 +19,15 @@ public:
     static Board load_board(const std::string path);
     static void save_board(const Board&);
 
+    size_t get_size_x() const;
+
+    size_t get_size_y() const;
+
+    bool *get_board() const;
+
 public:
 
-    Board(bool *board);
+    Board(bool *board, size_t x ,size_t y);
 
     Board(const Board &other);
 
@@ -38,6 +44,8 @@ private:
     /// \param y y coordinate
     /// \return addres in underlying arr
     size_t translate_adress(int x, int y);
+    size_t size_x_;
+    size_t size_y_;
 
     bool *board_;
 
