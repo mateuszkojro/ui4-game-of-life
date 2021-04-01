@@ -7,7 +7,7 @@
 
 /// \brief Base class for custom game engines
 class GameEngine {
-public:
+protected:
 
     /// \brief Config for game engines
     struct Config {

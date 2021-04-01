@@ -8,11 +8,29 @@
 #include "GameEngine.h"
 #include "Board.h"
 
+bool conway_activation(bool value, int no_neighbours);
+
 /// \brief Implementation of the game of life
 class GameOfLife : public GameEngine {
 public:
     explicit GameOfLife(const Config &config)
-            : GameEngine(config) {};
+            : GameEngine(config),
+              activation_func_(conway_activation) {};
+
+    GameOfLife(const GameOfLife &) = delete;
+
+    const GameOfLife &operator=(const GameOfLife &) = delete;
+
+    void play();
+
+    void set_activation_function(bool (*func)(bool, int));
+
+    /// sets the function that will be used to determine if cell shoud be allive
+    /// \param func returning bool (if is alive) has params (bool) is currently alive (int) how many
+    // neighbours it has
+    ~GameOfLife() override;
+
+protected:
 
     void on_start() override;
 
@@ -20,22 +38,10 @@ public:
 
     void on_end() override;
 
-    ~GameOfLife() override;
-
 private:
-    /// \brief Gets value at position from current board
-    /// \param x x coordinate of position to get
-    /// \param y y coordinate of position to get
-    /// \return value at position in current_board_
-    bool get_element(int x, int y) const;
 
-    /// \brief Sets value at position on next_board
-    /// \param x x coordinate of position to be set
-    /// \param y y coordinate of position to be set
-    /// \param value value to set at position
-    void set_element(int x, int y, bool value);
 
-    /// \brief Swaps current_board with next_board to be shown and to prepare for next tick
+    /// \brief Swaps current_board with next_board to be s  hown and to prepare for next tick
     void swap_boards();
 
     /// \brief Counts a number of alive cells around cell at position
@@ -45,9 +51,11 @@ private:
     unsigned count_alive_near_position(int x, int y) const;
 
     /// \brief board that is currently shown on the screen
-    Board* current_board_;
+    Board *current_board_;
     ///\brief board that will be shown on the next tick
-    Board* next_board_;
+    Board *next_board_;
+
+    bool (*activation_func_)(bool, int);
 
 };
 
