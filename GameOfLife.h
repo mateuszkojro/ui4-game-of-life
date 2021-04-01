@@ -6,6 +6,7 @@
 #define GAME_OF_LIFE_GAMEOFLIFE_H
 
 #include "GameEngine.h"
+#include "Board.h"
 
 /// \brief Implementation of the game of life
 class GameOfLife : public GameEngine {
@@ -44,9 +45,9 @@ private:
     unsigned count_alive_near_position(int x, int y) const;
 
     /// \brief board that is currently shown on the screen
-    bool* current_board_;
+    Board* current_board_;
     ///\brief board that will be shown on the next tick
-    bool* next_board_;
+    Board* next_board_;
 
 };
 
