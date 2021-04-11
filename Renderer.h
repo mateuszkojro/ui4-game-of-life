@@ -38,11 +38,21 @@ public:
     /// \param Color color to fill square with
     virtual void draw_square(const Coord &position, int size_x, int size_y, const Color &fill) = 0;
 
+    /// Sets the position at given coordinate to given Color
+    /// \param position const Coord& position of the pixels to be set
+    /// \param fill The color to set the pixel to
+    virtual void set_pixel(const Coord &position, const Color &fill) = 0;
+
     /// \brief Fill all screan with defined color
     /// \param Color color to fill the screen with
     virtual void clear_screen(const Color &fill) = 0;
 
     virtual ~Renderer() = default;
+
+protected:
+    int width_;
+    int height_;
+
 };
 
 
