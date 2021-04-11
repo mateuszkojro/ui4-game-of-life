@@ -24,10 +24,12 @@ public:
     void play();
 
 
-
+    /// Sets the function that will be used to determine if the cell should be alive
+    /// \param func function ptr function should return bool (true if a cell should be alive) based on
+    /// the number of alive neighbours and if given cell is alive
     void set_activation_function(bool (*func)(bool, int));
 
-    /// sets the function that will be used to determine if cell shoud be allive
+    /// sets the function that will be used to determine if cell should be alive
     /// \param func returning bool (if is alive) has params (bool) is currently alive (int) how many
     /// neighbours it has
     ~GameOfLife() override;
@@ -54,9 +56,9 @@ private:
 
     /// \brief board that is currently shown on the screen
     Board *current_board_;
-    ///\brief board that will be shown on the next tick
+    /// \brief board that will be shown on the next tick
     Board *next_board_;
-
+    /// \brief function that determines if the cell should be active or not
     bool (*activation_func_)(bool, int);
 
 };
