@@ -47,10 +47,27 @@ public:
     /// \param Color color to fill the screen with
     virtual void clear_screen(const Color &fill) = 0;
 
+    /// Show text in big letters on position
+    /// \param position Coord of the beginning of the text
+    /// \param text text to be printed
+    virtual void show_text_big(const Coord &position, const std::string & text) = 0;
+
+    /// Show text in medium letters on position
+    /// \param position Coord of the beginning of the text
+    /// \param text text to be printed
+    virtual void show_text_medium(const Coord &position, const std::string & text) = 0;
+
+    /// Show text in small letters on position
+    /// \param position Coord of the beginning of the text
+    /// \param text text to be printed
+    virtual void show_text_small(const Coord &position, const std::string & text) = 0;
+
     virtual ~Renderer() = default;
 
 protected:
+    /// width of the render plane
     int width_;
+    /// height of the render plane
     int height_;
 
 };
