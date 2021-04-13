@@ -40,10 +40,26 @@ std::array<bool *, 9> Board::get_neighbours(int i) {
 }
 
 Board Board::load_board(const std::string &path) {
+    std::fstream file;
+    file.open(path, std::ios::in);
+    size_t size_x, size_y;
+
+    file >> size_x >> size_y;
+    bool *board = new bool[size_y * size_x];
+    for (int i = 0; i < size_x * size_y; ++i) {
+        file >> board[i];
+    }
+    return Board(board, size_x, size_y);
 }
 
-void Board::save_board(const Board &) {
-
+void Board::save_board(const Board &board, const std::string &path) {
+    std::fstream file;
+    file.open(path, std::ios::out);
+    file << board.size_x_;
+    file << board.size_y_;
+    for (int i = 0; i < board.size(); ++i) {
+        file << board(i);
+    }
 }
 
 Board::Board(const Board &other) {
@@ -64,7 +80,7 @@ Board::Board(Board &&other) {
     other.board_ = nullptr;
 }
 
-const Board &Board::operator=(const Board &other) {
+Board &Board::operator=(const Board &other) {
     if (this == &other)
         return *this;
     copy(other);
@@ -81,4 +97,12 @@ size_t Board::translate_adress(int x, int y) const {
 
 bool &Board::operator()(int i) {
     return board_[i];
+}
+
+bool Board::operator()(int i) const {
+    return board_[i];
+}
+
+bool Board::operator()(int x, int y) const {
+    return operator()(translate_adress(x, y));
 }
