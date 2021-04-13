@@ -8,7 +8,11 @@
 #include "GameEngine.h"
 #include "Board.h"
 
-bool conway_activation(bool value, int no_neighbours);
+/// Activation function based on the original Conway's Game of Life
+/// \param is_alive is the cell alive or not
+/// \param no_neighbours how many alive neighbours are around
+/// \return true if cell should be alive false if not
+bool conway_activation(bool is_alive, int no_neighbours);
 
 /// \brief Implementation of the game of life
 class GameOfLife : public GameEngine {
@@ -21,8 +25,8 @@ public:
 
     const GameOfLife &operator=(const GameOfLife &) = delete;
 
+    /// start the game engine
     void play();
-
 
     /// Sets the function that will be used to determine if the cell should be alive
     /// \param func function ptr function should return bool (true if a cell should be alive) based on

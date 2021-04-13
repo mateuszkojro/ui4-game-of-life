@@ -47,3 +47,17 @@ void GameOfLife::swap_boards() {
     current_board_ = next_board_;
     next_board_ = temp;
 }
+
+bool conway_activation(bool is_alive, int no_neighbours) {
+    if (is_alive) {
+        if (no_neighbours == 2 || no_neighbours == 3)
+            return true;
+        else
+            return false;
+    } else {
+        if (no_neighbours == 3)
+            return true;
+        else
+            return false;
+    }
+}
