@@ -5,6 +5,8 @@
 #ifndef GAME_OF_LIFE_RENDERER_H
 #define GAME_OF_LIFE_RENDERER_H
 
+#include <string>
+
 /// \brief Struct containing coordinates of difrent objects
 struct Coord {
     int x;
@@ -61,6 +63,8 @@ public:
     /// \param position Coord of the beginning of the text
     /// \param text text to be printed
     virtual void show_text_small(const Coord &position, const std::string & text) = 0;
+
+    virtual void render() = 0;
 
     virtual ~Renderer() = default;
 
