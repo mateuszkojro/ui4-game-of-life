@@ -5,6 +5,8 @@
 #ifndef GAME_OF_LIFE_GAMEENGINE_H
 #define GAME_OF_LIFE_GAMEENGINE_H
 
+#include "Renderer.h"
+
 /// \brief Base class for custom game engines
 class GameEngine {
 
@@ -17,11 +19,13 @@ public:
 
     GameEngine &operator=(const GameEngine &) = delete;
 
-protected:
     /// \brief Config for game engines
     struct Config {
         int framerate;
+        Renderer *renderer;
     } current_config_;
+
+protected:
 
     /// \brief when we create a GameEngine we always need to give it a config
     explicit GameEngine(const GameEngine::Config &config) :
@@ -30,6 +34,10 @@ protected:
     /// \brief game engine will start working
     virtual void start_engine() final {
         on_start();
+        while (running_) {
+            on_tick();
+        }
+        on_end();
     };
 
     /// \brief This function is called on game start should be ovverided by the derriving class
@@ -45,14 +53,23 @@ protected:
 
 protected:
     /// \brief start main game loop - now every frame on_tick() will be called
-    void start_game_loop();
+    void start_game_loop() {
+        running_ = true;
+    }
 
     /// \brief stopping the game loop - the on_end() will be called next
-    void stop_game_loop();
+    void stop_game_loop() {
+        running_ = false;
+    }
+
+    Renderer *renderer_;
 
 private:
     /// \brief  engine logic happens here
     void main();
+
+    bool running_;
+
 };
 
 
