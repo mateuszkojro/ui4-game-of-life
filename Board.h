@@ -58,6 +58,7 @@ public:
 
 public:
 
+
     Board(bool *board, size_t x, size_t y);
 
     Board(const Board &other);
@@ -77,7 +78,7 @@ private:
     /// \param x x coordinate
     /// \param y y coordinate
     /// \return addres in underlying arr
-    size_t translate_adress(int x, int y) const;
+    int translate_adress(int x, int y) const;
 
     /// Helper function to copy the raw ptr
     /// \param other board being copied

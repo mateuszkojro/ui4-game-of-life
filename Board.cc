@@ -36,7 +36,29 @@ std::array<bool *, 9> Board::get_neighbours(int x, int y) {
 }
 
 std::array<bool *, 9> Board::get_neighbours(int i) {
-    return std::array<bool *, 9>();
+    std::array<bool *, 9> result{};
+
+    auto coord_from_itr = [this](int i, int &x, int &y) {
+        y = i / size_x_;
+        x = i % size_x_;
+    };
+
+    int pos_x, pos_y;
+
+    coord_from_itr(i, pos_x, pos_y);
+
+    int itr = 0;
+    for (int y = pos_y; y < 3; y++) {
+        for (int x = pos_x; x < 3; x++) {
+            if (x != pos_x && y != pos_y && translate_adress(x, y) != -1) {
+                result[itr++] = &board_[translate_adress(x, y)];
+            } else {
+                result[itr++] = nullptr;
+            }
+        }
+    }
+
+    return result;
 }
 
 Board Board::load_board(const std::string &path) {
@@ -91,7 +113,13 @@ int Board::size() const {
     return size_x_ * size_y_;
 }
 
-size_t Board::translate_adress(int x, int y) const {
+int Board::translate_adress(int x, int y) const {
+    if (y >= size_y_) {
+        return -1;
+    }
+    if (x >= size_x_) {
+        return -1;
+    }
     return y * size_y_ + x;
 }
 
