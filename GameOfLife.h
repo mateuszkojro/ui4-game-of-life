@@ -15,15 +15,23 @@
 bool conway_activation(bool is_alive, int no_neighbours);
 
 /// \brief Implementation of the game of life
+//template<class T>
 class GameOfLife : public GameEngine {
 public:
-    explicit GameOfLife(const Config &config)
+    explicit GameOfLife(const Board &board, const Config &config)
             : GameEngine(config),
-              activation_func_(conway_activation) {};
+              activation_func_(conway_activation) {
+
+        current_board_ = new Board(board);
+        next_board_ = new Board(board);
+        renderer_ = config.renderer;
+    };
 
     GameOfLife(const GameOfLife &) = delete;
 
     const GameOfLife &operator=(const GameOfLife &) = delete;
+
+    void render_board();
 
     /// start the game engine
     void play();
@@ -48,6 +56,7 @@ protected:
 
 private:
 
+    static int count(std::array<bool *, 9> data);
 
     /// \brief Swaps current_board with next_board to be s  hown and to prepare for next tick
     void swap_boards();
@@ -62,6 +71,9 @@ private:
     Board *current_board_;
     /// \brief board that will be shown on the next tick
     Board *next_board_;
+
+//    T renderer_;
+
     /// \brief function that determines if the cell should be active or not
     bool (*activation_func_)(bool, int);
 
