@@ -7,7 +7,7 @@
 
 #include <string>
 
-/// \brief Struct containing coordinates of difrent objects
+/// \brief Struct containing coordinates of different objects
 struct Coord {
     int x;
     int y;
@@ -25,8 +25,6 @@ enum class Color {
 /// \brief Basic base class for all renderers.
 class Renderer {
 public:
-
-    /// Reszta API silnika graficznegos
 
     /// \brief Creates window of given size
     /// \param int Size in x dimention
@@ -52,17 +50,17 @@ public:
     /// Show text in big letters on position
     /// \param position Coord of the beginning of the text
     /// \param text text to be printed
-    virtual void show_text_big(const Coord &position, const std::string & text) = 0;
+    virtual void show_text_big(const Coord &position, const std::string &text) = 0;
 
     /// Show text in medium letters on position
     /// \param position Coord of the beginning of the text
     /// \param text text to be printed
-    virtual void show_text_medium(const Coord &position, const std::string & text) = 0;
+    virtual void show_text_medium(const Coord &position, const std::string &text) = 0;
 
     /// Show text in small letters on position
     /// \param position Coord of the beginning of the text
     /// \param text text to be printed
-    virtual void show_text_small(const Coord &position, const std::string & text) = 0;
+    virtual void show_text_small(const Coord &position, const std::string &text) = 0;
 
     virtual void render() = 0;
 

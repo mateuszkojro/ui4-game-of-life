@@ -44,7 +44,6 @@ void GameOfLife::render_board() {
                 color = Color::White;
             else
                 color = Color::Black;
-
             renderer_->set_pixel(Coord{x, y}, color);
         }
     }
@@ -76,7 +75,9 @@ void GameOfLife::swap_boards() {
     current_board_ = next_board_;
     next_board_ = temp;
 }
-
+/// Count the number of fields in an array that are true
+/// \param data is a std::array<bool*, 9> with surrounding cells
+/// \return number of cells that are alive
 int GameOfLife::count(std::array<bool *, 9> data) {
     int counter = 0;
     for (auto *field : data) {
