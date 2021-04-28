@@ -27,8 +27,8 @@ class Renderer {
 public:
 
     /// \brief Creates window of given size
-    /// \param int Size in x dimention
-    /// \param int Size in y dimention
+    /// \param int Size in x dimension
+    /// \param int Size in y dimension
     virtual void create_window(int size_x, int size_y) = 0;
 
     /// \brief Draws a square on position wit size and fill
@@ -43,7 +43,7 @@ public:
     /// \param fill The color to set the pixel to
     virtual void set_pixel(const Coord &position, const Color &fill) = 0;
 
-    /// \brief Fill all screan with defined color
+    /// \brief Fill all screen with defined color
     /// \param Color color to fill the screen with
     virtual void clear_screen(const Color &fill) = 0;
 
