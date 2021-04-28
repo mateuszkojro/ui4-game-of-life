@@ -95,7 +95,7 @@ unsigned SimpleConsoleRenderer::translate(Coord position) {
 
 GrayscalePixel SimpleConsoleRenderer::color_to_pixel(const Color &color) {
     GrayscalePixel pixel_color = 301;
-    if (color == Color::White) {
+    if (color == Color::Black) {
         pixel_color = 300;
     }
     return pixel_color;
