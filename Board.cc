@@ -95,7 +95,7 @@ void Board::copy(const Board &other) {
     memcpy(board_, other.board_, size());
 }
 
-Board::Board(Board &&other) {
+Board::Board(Board &&other) noexcept {
     size_y_ = other.size_y_;
     size_x_ = other.size_x_;
     board_ = other.board_;
@@ -127,10 +127,10 @@ bool &Board::operator()(int i) {
     return board_[i];
 }
 
-bool Board::operator()(int i) const {
+bool &Board::operator()(int i) const {
     return board_[i];
 }
 
-bool Board::operator()(int x, int y) const {
+bool &Board::operator()(int x, int y) const {
     return operator()(translate_adress(x, y));
 }

@@ -16,20 +16,20 @@ public:
 
     Board() = delete;
 
-    /// Accesses element of undderyling arr
+    /// Accesses element of underlying arr
     /// \param x x coordinate
     /// \param y y coordinate
     /// \return reference to given field
     bool &operator()(int x, int y);
     bool &operator()(int i);
 
-    bool operator()(int x, int y) const;
-    bool operator()(int i) const;
+    bool &operator()(int x, int y) const;
+    bool &operator()(int i) const;
 
-    /// Rerturns array of ptrs to neighbours Some might be null
+    /// Returns array of pairs to neighbours Some might be null
     /// \param x x coordinate
-    /// \param y y coordinare
-    /// \return array of ptrs to neighbour cells (some might be null)
+    /// \param y y coordinate
+    /// \return array of pointers to neighbour cells (some might be null)
     std::array<bool *, 9> get_neighbours(int x, int y);
     std::array<bool *, 9> get_neighbours(int i);
 
@@ -63,7 +63,7 @@ public:
 
     Board(const Board &other);
 
-    Board(Board &&other);
+    Board(Board &&other) noexcept ;
 
     Board &operator=(const Board &);
 
@@ -74,10 +74,10 @@ public:
 
 
 private:
-    /// Internal: Translate from x y coordinates to one dimentional arr
+    /// Internal: Translate from x y coordinates to one dimensional arr
     /// \param x x coordinate
     /// \param y y coordinate
-    /// \return addres in underlying arr
+    /// \return address in underlying arr
     int translate_adress(int x, int y) const;
 
     /// Helper function to copy the raw ptr
