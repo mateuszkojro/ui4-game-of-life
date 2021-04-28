@@ -6,6 +6,8 @@
 #define GAME_OF_LIFE_GAMEENGINE_H
 
 #include "Renderer.h"
+#include <chrono>
+#include <thread>
 
 /// \brief Base class for custom game engines
 class GameEngine {
@@ -35,12 +37,17 @@ protected:
     virtual void start_engine() final {
         on_start();
         while (running_) {
+            auto start = std::chrono::high_resolution_clock::now();
             on_tick();
+            auto stop = std::chrono::high_resolution_clock::now();
+            auto target_frame_time = std::chrono::seconds(1 / current_config_.framerate);
+            auto current_frame_time = start - stop;
+            std::this_thread::sleep_for(target_frame_time - current_frame_time);
         }
         on_end();
     };
 
-    /// \brief This function is called on game start should be ovverided by the derriving class
+    /// \brief This function is called on game start should be overrided by the deriving class
     virtual void on_start() = 0;
 
     /// \brief This function will be invoked on every world tick should be ovverided by the derriving class
