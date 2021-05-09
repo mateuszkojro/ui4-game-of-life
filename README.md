@@ -6,6 +6,10 @@ Implementacja gry w życie Johna Conwaya
 
 <https://github.com/mateuszkojro/ui4_game_of_life>
 
+### Dokumentacja
+
+<https://mateuszkojro.github.io/ui4_game_of_life/>
+
 ## Wymagania
 
 Aby skompilowac projekt wymagany jest przynajmniej standerd **C++ 14**
@@ -36,3 +40,40 @@ GameOfLife game_of_life(board, config);
 
 gdzie `SimpleConsoleRenderer` to klasa dziedziczaca po `Renderer`
 
+## Mozliwa konfiguracja
+
+Istnieje mozliwosc ustawienia poczatkowego stanu planszy za pomocą funkcjonalnosci udostepnionych przez klase `Board`:
+
+1. Zapisywanie i odczytywanie stanu planszy z pliku:
+
+```cpp
+    // mozemy otworzyc wczesniej zapisana plansze
+const char[] PATH = "saved_board.data";
+auto saved_board = Board::load_board(PATH);
+
+// ustawiamy komurke na adresie x=1, y=1 jako aktywna
+saved_board(1, 1) = true;
+
+// Zapisujemy wprowadzone dane
+Board::save_board(saved_board, "new_board.data")
+
+```
+
+2. Ustawienie zawartosci planszy za pomoca tablicy wartosci boolowskich gdzie `true` znaczy ze komurka bedzie zywa
+   a `false` ze martwa
+   
+```cpp
+    
+    const size_x = 20, size_y = 20;
+
+    auto data = new bool[size_x * size_y];
+
+    memset(data, true, size_x * size_y);
+
+    data[11] = true;
+    data[12] = true;
+    data[13] = true;
+
+    Board board(data, size_x, size_y);
+
+```

@@ -9,6 +9,9 @@
 
 /// \brief Struct containing coordinates of different objects
 struct Coord {
+    Coord(int x_in, int y_in) :
+            x(x_in),
+            y(y_in) {}
     int x;
     int y;
 };

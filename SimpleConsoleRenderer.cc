@@ -3,6 +3,8 @@
 //
 
 #include <iostream>
+#include "SimpleConsoleRenderer.h"
+
 
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
 
@@ -10,7 +12,10 @@
 
 #endif
 
-#include "SimpleConsoleRenderer.h"
+#define IS_ALPHA_NUMERIC(x) (x < 256)
+#define COLOR_BLACK 301
+#define COLOR_WHITE 300
+
 
 void SimpleConsoleRenderer::create_window(int size_x, int size_y) {
     width_ = size_x;
@@ -74,15 +79,18 @@ void SimpleConsoleRenderer::show_text_small(const Coord &position, const std::st
 
 void SimpleConsoleRenderer::render() {
     clear_window();
-    for (int y = 0; y < height_; y++) {
-        for (int x = 0; x < width_; x++) {
-            if (video_buffer_[translate({x, y})] > 300) {
-                std::cout << '#';
-            } else if (video_buffer_[translate({x, y})] < 256) {
-                std::cout << (char) video_buffer_[translate({x, y})];
-            } else {
+    for (int x = 0; x < height_; x++) {
+        for (int y = 0; y < width_; y++) {
+            auto item = video_buffer_[translate({x, y})];
+            if (IS_ALPHA_NUMERIC(item))
+                std::cout << (char) item;
+            else if (item >= COLOR_BLACK)
                 std::cout << ' ';
-            }
+            else if (item == COLOR_WHITE)
+                std::cout << "#";
+            else
+                throw std::exception("Bad value");
+
             std::cout << " ";
         }
         std::cout << std::endl;
@@ -94,9 +102,9 @@ unsigned SimpleConsoleRenderer::translate(Coord position) {
 }
 
 GrayscalePixel SimpleConsoleRenderer::color_to_pixel(const Color &color) {
-    GrayscalePixel pixel_color = 301;
-    if (color == Color::Black) {
-        pixel_color = 300;
+    GrayscalePixel pixel_color = COLOR_BLACK;
+    if (color == Color::White) {
+        pixel_color = COLOR_WHITE;
     }
     return pixel_color;
 }

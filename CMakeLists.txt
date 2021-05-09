@@ -9,4 +9,5 @@ add_executable(game_of_life
         Renderer.h
         SimpleConsoleRenderer.cc SimpleConsoleRenderer.h
         GameEngine.h
-        GameOfLife.cc GameOfLife.h)
+        GameOfLife.cc GameOfLife.h
+        )

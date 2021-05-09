@@ -3,32 +3,35 @@
 //
 
 #include "Board.h"
+#include <assert.h>
 
 Board::Board(bool *board, size_t x, size_t y) :
         size_x_(x),
         size_y_(y) {
-    board_ = new bool[size()];
-    memcpy(board_, board, size());
+    board_ = board;//new bool[size()];
 }
 
 Board::~Board() {
     delete[] board_;
+    board_ = nullptr;
 }
 
-size_t Board::get_size_x() const {
+size_t Board::size_x() const {
     return size_x_;
 }
 
-size_t Board::get_size_y() const {
+size_t Board::size_y() const {
     return size_y_;
+}
+
+void Board::fill(bool value) {
+  for (int i = 0; i < size(); i++) {
+    operator()(i) = value;
+  }
 }
 
 bool *Board::get_board() const {
     return board_;
-}
-
-bool &Board::operator()(int x, int y) {
-    return board_[translate_adress(x, y)];
 }
 
 std::array<bool *, 9> Board::get_neighbours(int x, int y) {
@@ -38,23 +41,29 @@ std::array<bool *, 9> Board::get_neighbours(int x, int y) {
 std::array<bool *, 9> Board::get_neighbours(int i) {
     std::array<bool *, 9> result{};
 
-    auto coord_from_itr = [this](int i, int &x, int &y) {
-        y = i / size_x_;
-        x = i % size_x_;
-    };
 
     int pos_x, pos_y;
 
-    coord_from_itr(i, pos_x, pos_y);
+    // Transform continuous address to x, y one
+    pos_y = i / size_x_;
+    pos_x = i % size_x_;
 
+    // place in out array
     int itr = 0;
-    for (int y = pos_y; y < 3; y++) {
-        for (int x = pos_x; x < 3; x++) {
-            if (x != pos_x && y != pos_y && translate_adress(x, y) != -1) {
-                result[itr++] = &board_[translate_adress(x, y)];
-            } else {
+
+
+    for (int y = -1; y <= 1; y++) {
+        for (int x = -1; x <= 1; x++) {
+
+            // transform to position on the board
+            int board_x = pos_x + x;
+            int board_y = pos_y + y;
+            int board_i = translate_adress(board_x, board_y);
+
+            if ((board_x != pos_x) && ( board_y != pos_y) && (board_i != -1))
+                result[itr++] = &board_[board_i];
+            else
                 result[itr++] = nullptr;
-            }
         }
     }
 
@@ -96,6 +105,7 @@ void Board::copy(const Board &other) {
 }
 
 Board::Board(Board &&other) noexcept {
+    assert(false);
     size_y_ = other.size_y_;
     size_x_ = other.size_x_;
     board_ = other.board_;
@@ -109,22 +119,25 @@ Board &Board::operator=(const Board &other) {
     return *this;
 }
 
-int Board::size() const {
+unsigned Board::size() const {
     return size_x_ * size_y_;
 }
 
 int Board::translate_adress(int x, int y) const {
-    if (y >= size_y_) {
+    if (y >= size_y_)
         return -1;
-    }
-    if (x >= size_x_) {
+    if (x >= size_x_)
         return -1;
-    }
+
     return y * size_y_ + x;
 }
 
 bool &Board::operator()(int i) {
     return board_[i];
+}
+
+bool &Board::operator()(int x, int y) {
+    return operator()(translate_adress(x, y));
 }
 
 bool &Board::operator()(int i) const {
