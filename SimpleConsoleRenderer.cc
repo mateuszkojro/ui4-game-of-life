@@ -79,21 +79,22 @@ void SimpleConsoleRenderer::show_text_small(const Coord &position, const std::st
 
 void SimpleConsoleRenderer::render() {
     clear_window();
-    for (int x = 0; x < height_; x++) {
-        for (int y = 0; y < width_; y++) {
-            auto item = video_buffer_[translate({x, y})];
-            if (IS_ALPHA_NUMERIC(item))
-                std::cout << (char) item;
-            else if (item >= COLOR_BLACK)
-                std::cout << ' ';
-            else if (item == COLOR_WHITE)
-                std::cout << "#";
-            else
-                throw std::exception("Bad value");
+    for (int y = 0; y < height_; y++) {
+      for (int x = 0; x < width_; x++) {
 
-            std::cout << " ";
-        }
-        std::cout << std::endl;
+        auto item = video_buffer_[translate({x, y})];
+        if (IS_ALPHA_NUMERIC(item))
+          std::cout << (char)item;
+        else if (item >= COLOR_BLACK)
+          std::cout << ' ';
+        else if (item == COLOR_WHITE)
+          std::cout << "#";
+        else
+          throw std::exception("Bad value");
+
+        std::cout << " ";
+      }
+      std::cout << std::endl;
     }
 }
 
