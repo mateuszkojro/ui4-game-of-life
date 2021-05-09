@@ -4,6 +4,7 @@
 
 #include "Board.h"
 #include <assert.h>
+#include <cstdio>
 
 Board::Board(bool *board, size_t x, size_t y) :
         size_x_(x),
