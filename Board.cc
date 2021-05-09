@@ -34,12 +34,12 @@ bool *Board::get_board() const {
     return board_;
 }
 
-std::array<bool *, 9> Board::get_neighbours(int x, int y) {
+std::array<bool, 9> Board::get_neighbours(int x, int y) {
     return get_neighbours(translate_adress(x, y));
 }
 
-std::array<bool *, 9> Board::get_neighbours(int i) {
-    std::array<bool *, 9> result{};
+std::array<bool, 9> Board::get_neighbours(int i) {
+    std::array<bool, 9> result{};
 
 
     int pos_x, pos_y;
@@ -60,10 +60,14 @@ std::array<bool *, 9> Board::get_neighbours(int i) {
             int board_y = pos_y + y;
             int board_i = translate_adress(board_x, board_y);
 
-            if ((board_x != pos_x) && ( board_y != pos_y) && (board_i != -1))
-                result[itr++] = &board_[board_i];
-            else
-                result[itr++] = nullptr;
+            bool is_target = (board_x == pos_x) && (board_y == pos_y);
+            bool is_valid = (board_i != -1);
+
+            if (!is_target && is_valid){
+                result[itr++] = board_[board_i];
+            } else {
+                result[itr++] = false;
+            }
         }
     }
 

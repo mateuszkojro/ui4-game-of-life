@@ -41,12 +41,12 @@ public:
     /// \param x x coordinate
     /// \param y y coordinate
     /// \return array of pointers to neighbour cells (some might be null)
-    std::array<bool *, 9> get_neighbours(int x, int y);
+    std::array<bool, 9> get_neighbours(int x, int y);
 
     /// its an analog for  get_neighbours(int x, int y);
     /// returns array of pairs to neighbours Some might be null
     /// \param i address of the underlying array
-    std::array<bool *, 9> get_neighbours(int i);
+    std::array<bool, 9> get_neighbours(int i);
 
     /// Load board from the file
     /// \param Path to the file containing the Board
