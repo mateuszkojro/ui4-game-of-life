@@ -128,12 +128,16 @@ unsigned Board::size() const {
 }
 
 int Board::translate_adress(int x, int y) const {
-    if (y >= size_y_)
-        return -1;
-    if (x >= size_x_)
-        return -1;
+  if (y >= size_y_)
+    return -1;
+  if (x >= size_x_)
+    return -1;
+  if (x < 0)
+    return -1;
+  if (y < 0)
+    return -1;
 
-    return y * size_y_ + x;
+  return y * size_x_ + x;
 }
 
 bool &Board::operator()(int i) {
