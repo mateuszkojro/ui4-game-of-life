@@ -74,6 +74,8 @@ public:
 
     Board(bool *board, size_t x, size_t y);
 
+    Board(size_t x, size_t y);
+
     Board(const Board &other);
 
     Board(Board &&other) noexcept;

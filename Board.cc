@@ -9,7 +9,11 @@
 Board::Board(bool *board, size_t x, size_t y) :
         size_x_(x),
         size_y_(y) {
-    board_ = board;//new bool[size()];
+    board_ = board;
+}
+
+Board::Board(size_t x, size_t y) : size_x_(x), size_y_(y) {
+  board_ = new bool[x * y];
 }
 
 Board::~Board() {
