@@ -2,9 +2,18 @@
 // Created by mateu on 3/24/2021.
 //
 
-#include <algorithm>
-#include <iostream>
 #include "GameOfLife.h"
+#include <algorithm>
+#include <cstdio>
+#include <iostream>
+#include <ostream>
+#include <cstdio>
+
+static void show_board(const Board &board) {
+  for (int i = 0; i < board.size(); i++) {
+    std::cout << board(i) << " ";
+  }
+}
 
 void GameOfLife::play() {
     start_engine();
@@ -50,28 +59,44 @@ void GameOfLife::render_current_board() {
             renderer_->set_pixel(Coord(x, y), color);
         }
     }
-    std::cout << "Next board" << std::endl;
     renderer_->render();
 }
 
 void GameOfLife::on_tick() {
-    // loop through all the active and inactive cells
-    for (int i = 0; i < current_board_->size(); ++i) {
-        // get neighbours for current cell
-        auto neighbours = current_board_->get_neighbours(i);
-        // make a cell alive if activation function determines so
-        (*next_board_)(i) = activation_func_(
-                // Whats the current state of the cell
-                (*next_board_)(i),
-                // Count cells that are active around this cell
-                count(neighbours));
-    }
+  // loop through all the active and inactive cells
+  for (int i = 0; i < current_board_->size(); ++i) {
+    // get neighbours for current cell
+    auto neighbours = current_board_->get_neighbours(i);
+    // make a cell alive if activation function determines so
+    bool value = activation_func_(
+        // Whats the current state of the cell
+        (*next_board_)(i),
+        // Count cells that are active around this cell
+        std::count(neighbours.begin(), neighbours.end(), true));
 
-    render_current_board();
+#if DEBUG
+    std::printf("Value at cell %d is %d input was (%lld)\n", i, value,
+                std::count(neighbours.begin(), neighbours.end(), true));
+#endif
 
-    Board temp = *next_board_;
-    *next_board_ = *current_board_;
-    *current_board_ = temp;
+    (*next_board_)(i) = value;
+  }
+
+#if DEBUG
+  static int tick = 0;
+  std::printf("Tick %d\n", tick++);
+  std::printf("Current board\n");
+  show_board(*current_board_);
+  std::printf("\nNext board\n");
+  show_board(*next_board_);
+  std::printf("\n\n");
+#else
+  render_current_board();
+#endif
+
+  Board temp = *next_board_;
+  *next_board_ = *current_board_;
+  *current_board_ = temp;
 
 }
 
@@ -80,21 +105,9 @@ void GameOfLife::on_end() {
     renderer_->show_text_small(Coord(0, 0), "Dziekuje!");
 }
 
-/// Count the number of fields in an array that are true
-/// \param data is a std::array<bool*, 9> with surrounding cells
-/// \return number of cells that are alive
-int GameOfLife::count(std::array<bool *, 9> data) {
-    int counter = 0;
-    for (bool *field : data) {
-        if (field)
-            counter++;
-    }
-    return counter;
-}
-
 /// Activation function proposed by Conway in his original game
 /// \param is_alive is cell that is checked alive
-/// \param no_neighbours how many neighbours is alive
+/// \param no_neighbours how many neighbours are alive
 /// \return should the cell be alive or not
 bool conway_activation(bool is_alive, int no_neighbours) {
     if (is_alive) {

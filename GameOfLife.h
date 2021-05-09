@@ -57,12 +57,6 @@ protected:
 
 private:
 
-
-    /// Count alive cells that are alive in array
-    /// \param data an standard array contacting ptrs to cells in array
-    /// \return number of alive cells in array
-    static int count(std::array<bool *, 9> data);
-
     /// \brief board that is currently shown on the screen
     Board *current_board_;
     /// \brief board that will be shown on the next tick
