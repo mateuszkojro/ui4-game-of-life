@@ -1,6 +1,5 @@
 var files_dup =
 [
-    [ "build", "dir_4fef79e7177ba769987a8da36c892c5f.html", "dir_4fef79e7177ba769987a8da36c892c5f" ],
     [ "Board.cc", "_board_8cc.html", null ],
     [ "Board.h", "_board_8h.html", [
       [ "Board", "class_board.html", "class_board" ]

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['renderer_147',['renderer',['../struct_game_engine_1_1_config.html#ad43a55612b1ae650dac1bcecbb38e076',1,'GameEngine::Config']]],
-  ['renderer_5f_148',['renderer_',['../class_game_engine.html#af7c59089dce2c6387ed59d174f0b687e',1,'GameEngine']]]
+  ['width_5f_128',['width_',['../class_renderer.html#a143ee55e93aa1b9d9c71040edf04816e',1,'Renderer']]]
 ];
