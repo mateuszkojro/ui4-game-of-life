@@ -4,11 +4,11 @@ Implementacja gry w życie Johna Conwaya
 
 ### Kod źródłowy
 
-<https://github.com/mateuszkojro/ui4_game_of_life>
+<https://github.com/mateuszkojro/ui4-game-of-life>
 
 ### Dokumentacja
 
-<https://mateuszkojro.github.io/ui4_game_of_life/>
+<https://mateuszkojro.github.io/ui4-game-of-life/>
 
 ## Wymagania
 
