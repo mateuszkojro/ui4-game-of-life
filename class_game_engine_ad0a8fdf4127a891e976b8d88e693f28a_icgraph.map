@@ -1,0 +1,5 @@
+<map id="GameEngine::start_engine" name="GameEngine::start_engine">
+<area shape="rect" id="node1" title="game engine will start working" alt="" coords="276,5,453,32"/>
+<area shape="rect" id="node2" href="$class_game_of_life.html#a822e5412210202b1baab31944e4e5e9c" title="start the game engine" alt="" coords="104,5,228,32"/>
+<area shape="rect" id="node3" href="$main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>

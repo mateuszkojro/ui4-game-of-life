@@ -1,0 +1,7 @@
+<map id="Board::size" name="Board::size">
+<area shape="rect" id="node1" title="Return the size of the underlying array (width * height)" alt="" coords="295,56,381,83"/>
+<area shape="rect" id="node2" href="$class_board.html#a5c883a0d65a07e5b793f512e190719ac" title=" " alt="" coords="137,5,214,32"/>
+<area shape="rect" id="node4" href="$class_game_of_life.html#a5cd8f191fd9b69cc946a37d1a5eeb256" title="This function will be invoked on every world tick should be ovverided by the derriving class." alt="" coords="104,56,247,83"/>
+<area shape="rect" id="node5" href="$class_board.html#ab9d0f849f2c26927528ea54ce99057ab" title=" " alt="" coords="110,107,241,133"/>
+<area shape="rect" id="node3" href="$main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>

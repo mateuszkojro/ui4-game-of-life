@@ -1,0 +1,6 @@
+<map id="GameOfLife" name="GameOfLife">
+<area shape="rect" id="node1" title="Implementation of the game of life." alt="" coords="5,691,180,900"/>
+<area shape="rect" id="node2" href="$class_game_engine.html" title="Base class for custom game engines." alt="" coords="23,417,162,641"/>
+<area shape="rect" id="node3" href="$class_renderer.html" title="Basic base class for all renderers." alt="" coords="15,5,170,215"/>
+<area shape="rect" id="node4" href="$struct_game_engine_1_1_config.html" title="Config for game engines." alt="" coords="161,277,304,355"/>
+</map>

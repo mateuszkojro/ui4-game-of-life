@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Game of life: GameEngine Class Reference</title>
+<title>Simple language: GameEngine Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Game of life
+   <div id="projectname">Simple language
    </div>
   </td>
  </tr>
@@ -83,6 +83,8 @@ $(document).ready(function(){initNavTree('class_game_engine.html',''); initResiz
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_game_engine-members.html">List of all members</a>  </div>
@@ -95,15 +97,29 @@ $(document).ready(function(){initNavTree('class_game_engine.html',''); initResiz
  <a href="class_game_engine.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for GameEngine:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="class_game_engine.png" usemap="#GameEngine_map" alt=""/>
-  <map id="GameEngine_map" name="GameEngine_map">
-<area href="class_game_of_life.html" title="Implementation of the game of life." alt="GameOfLife" shape="rect" coords="0,56,83,80"/>
-  </map>
-</div></div>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for GameEngine:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_game_engine__inherit__graph.png" border="0" usemap="#a_game_engine_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_game_engine_inherit__map" id="a_game_engine_inherit__map">
+<area shape="rect" title="Base class for custom game engines." alt="" coords="23,5,162,244"/>
+<area shape="rect" href="class_game_of_life.html" title="Implementation of the game of life." alt="" coords="5,292,180,501"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for GameEngine:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_game_engine__coll__graph.png" border="0" usemap="#a_game_engine_coll__map" alt="Collaboration graph"/></div>
+<map name="a_game_engine_coll__map" id="a_game_engine_coll__map">
+<area shape="rect" title="Base class for custom game engines." alt="" coords="13,417,152,641"/>
+<area shape="rect" href="class_renderer.html" title="Basic base class for all renderers." alt="" coords="5,5,160,215"/>
+<area shape="rect" href="struct_game_engine_1_1_config.html" title="Config for game engines." alt="" coords="151,277,294,355"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -111,59 +127,486 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_game_engine_1_1_config.html" title="Config for game engines.">Config</a> for game engines.  <a href="struct_game_engine_1_1_config.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a4f8a6b171d3977559ffd9a0bc20785bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a4f8a6b171d3977559ffd9a0bc20785bf">GameEngine</a> ()=delete</td></tr>
+<tr class="memdesc:a4f8a6b171d3977559ffd9a0bc20785bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">We dont wanna allow creating <a class="el" href="class_game_engine.html" title="Base class for custom game engines.">GameEngine</a> without configuration.  <a href="class_game_engine.html#a4f8a6b171d3977559ffd9a0bc20785bf">More...</a><br /></td></tr>
+<tr class="separator:a4f8a6b171d3977559ffd9a0bc20785bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7320ddc69daeded79d1b0648e57a289f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a7320ddc69daeded79d1b0648e57a289f">GameEngine</a> (const <a class="el" href="class_game_engine.html">GameEngine</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a7320ddc69daeded79d1b0648e57a289f"><td class="mdescLeft">&#160;</td><td class="mdescRight">We dont wanna allow copying our game engine.  <a href="class_game_engine.html#a7320ddc69daeded79d1b0648e57a289f">More...</a><br /></td></tr>
+<tr class="separator:a7320ddc69daeded79d1b0648e57a289f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d0ff681fe2a75c22e37073b7de1497"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_engine.html">GameEngine</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a14d0ff681fe2a75c22e37073b7de1497">operator=</a> (const <a class="el" href="class_game_engine.html">GameEngine</a> &amp;)=delete</td></tr>
+<tr class="separator:a14d0ff681fe2a75c22e37073b7de1497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a97f0a1169218171ef3f9910ca68553c5"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_game_engine_1_1_config.html">GameEngine::Config</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a97f0a1169218171ef3f9910ca68553c5">current_config_</a></td></tr>
+<tr class="separator:a97f0a1169218171ef3f9910ca68553c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a4f8a6b171d3977559ffd9a0bc20785bf"><td class="memItemLeft" align="right" valign="top"><a id="a4f8a6b171d3977559ffd9a0bc20785bf"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a4f8a6b171d3977559ffd9a0bc20785bf">GameEngine</a> ()=delete</td></tr>
-<tr class="memdesc:a4f8a6b171d3977559ffd9a0bc20785bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">We dont wanna allow creating <a class="el" href="class_game_engine.html" title="Base class for custom game engines.">GameEngine</a> without configuration. <br /></td></tr>
-<tr class="separator:a4f8a6b171d3977559ffd9a0bc20785bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7320ddc69daeded79d1b0648e57a289f"><td class="memItemLeft" align="right" valign="top"><a id="a7320ddc69daeded79d1b0648e57a289f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a7320ddc69daeded79d1b0648e57a289f">GameEngine</a> (const <a class="el" href="class_game_engine.html">GameEngine</a> &amp;)=delete</td></tr>
-<tr class="memdesc:a7320ddc69daeded79d1b0648e57a289f"><td class="mdescLeft">&#160;</td><td class="mdescRight">We dont wanna allow copying our game engine. <br /></td></tr>
-<tr class="separator:a7320ddc69daeded79d1b0648e57a289f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a165c67fba48ac2bb3ad3c329dcdfc190"><td class="memItemLeft" align="right" valign="top"><a id="a165c67fba48ac2bb3ad3c329dcdfc190"></a>
-const <a class="el" href="class_game_engine.html">GameEngine</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_game_engine.html">GameEngine</a> &amp;)=delete</td></tr>
-<tr class="separator:a165c67fba48ac2bb3ad3c329dcdfc190"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a534b7882da1ceb4e14aba9012411a28a"><td class="memItemLeft" align="right" valign="top"><a id="a534b7882da1ceb4e14aba9012411a28a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a534b7882da1ceb4e14aba9012411a28a">GameEngine</a> (const <a class="el" href="struct_game_engine_1_1_config.html">GameEngine::Config</a> &amp;config)</td></tr>
-<tr class="memdesc:a534b7882da1ceb4e14aba9012411a28a"><td class="mdescLeft">&#160;</td><td class="mdescRight">when we create a <a class="el" href="class_game_engine.html" title="Base class for custom game engines.">GameEngine</a> we always need to give it a config <br /></td></tr>
+<tr class="memitem:a534b7882da1ceb4e14aba9012411a28a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a534b7882da1ceb4e14aba9012411a28a">GameEngine</a> (const <a class="el" href="struct_game_engine_1_1_config.html">GameEngine::Config</a> &amp;config)</td></tr>
+<tr class="memdesc:a534b7882da1ceb4e14aba9012411a28a"><td class="mdescLeft">&#160;</td><td class="mdescRight">when we create a <a class="el" href="class_game_engine.html" title="Base class for custom game engines.">GameEngine</a> we always need to give it a config  <a href="class_game_engine.html#a534b7882da1ceb4e14aba9012411a28a">More...</a><br /></td></tr>
 <tr class="separator:a534b7882da1ceb4e14aba9012411a28a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0a8fdf4127a891e976b8d88e693f28a"><td class="memItemLeft" align="right" valign="top"><a id="ad0a8fdf4127a891e976b8d88e693f28a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ad0a8fdf4127a891e976b8d88e693f28a">start_engine</a> () final</td></tr>
-<tr class="memdesc:ad0a8fdf4127a891e976b8d88e693f28a"><td class="mdescLeft">&#160;</td><td class="mdescRight">game engine will start working <br /></td></tr>
+<tr class="memitem:ad0a8fdf4127a891e976b8d88e693f28a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ad0a8fdf4127a891e976b8d88e693f28a">start_engine</a> () final</td></tr>
+<tr class="memdesc:ad0a8fdf4127a891e976b8d88e693f28a"><td class="mdescLeft">&#160;</td><td class="mdescRight">game engine will start working  <a href="class_game_engine.html#ad0a8fdf4127a891e976b8d88e693f28a">More...</a><br /></td></tr>
 <tr class="separator:ad0a8fdf4127a891e976b8d88e693f28a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a368522a8a9391ba9dc89a86799c6176b"><td class="memItemLeft" align="right" valign="top"><a id="a368522a8a9391ba9dc89a86799c6176b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a368522a8a9391ba9dc89a86799c6176b">on_start</a> ()=0</td></tr>
-<tr class="memdesc:a368522a8a9391ba9dc89a86799c6176b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called on game start should be ovverided by the derriving class. <br /></td></tr>
+<tr class="memitem:a368522a8a9391ba9dc89a86799c6176b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a368522a8a9391ba9dc89a86799c6176b">on_start</a> ()=0</td></tr>
+<tr class="memdesc:a368522a8a9391ba9dc89a86799c6176b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called on game start should be overrided by the deriving class.  <a href="class_game_engine.html#a368522a8a9391ba9dc89a86799c6176b">More...</a><br /></td></tr>
 <tr class="separator:a368522a8a9391ba9dc89a86799c6176b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6936abd9f2ed9fdf1c183bc169b7c434"><td class="memItemLeft" align="right" valign="top"><a id="a6936abd9f2ed9fdf1c183bc169b7c434"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a6936abd9f2ed9fdf1c183bc169b7c434">on_tick</a> ()=0</td></tr>
-<tr class="memdesc:a6936abd9f2ed9fdf1c183bc169b7c434"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be invoked on every world tick should be ovverided by the derriving class. <br /></td></tr>
+<tr class="memitem:a6936abd9f2ed9fdf1c183bc169b7c434"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a6936abd9f2ed9fdf1c183bc169b7c434">on_tick</a> ()=0</td></tr>
+<tr class="memdesc:a6936abd9f2ed9fdf1c183bc169b7c434"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be invoked on every world tick should be ovverided by the derriving class.  <a href="class_game_engine.html#a6936abd9f2ed9fdf1c183bc169b7c434">More...</a><br /></td></tr>
 <tr class="separator:a6936abd9f2ed9fdf1c183bc169b7c434"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab30d1764c6659eba50865e909ed6f3da"><td class="memItemLeft" align="right" valign="top"><a id="ab30d1764c6659eba50865e909ed6f3da"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ab30d1764c6659eba50865e909ed6f3da">on_end</a> ()=0</td></tr>
-<tr class="memdesc:ab30d1764c6659eba50865e909ed6f3da"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called when the game ends should be ovverided by the derriving class. <br /></td></tr>
+<tr class="memitem:ab30d1764c6659eba50865e909ed6f3da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#ab30d1764c6659eba50865e909ed6f3da">on_end</a> ()=0</td></tr>
+<tr class="memdesc:ab30d1764c6659eba50865e909ed6f3da"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is called when the game ends should be ovverided by the derriving class.  <a href="class_game_engine.html#ab30d1764c6659eba50865e909ed6f3da">More...</a><br /></td></tr>
 <tr class="separator:ab30d1764c6659eba50865e909ed6f3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44578dd27650faf3c1ca708d9fa96c07"><td class="memItemLeft" align="right" valign="top"><a id="a44578dd27650faf3c1ca708d9fa96c07"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a44578dd27650faf3c1ca708d9fa96c07">start_game_loop</a> ()</td></tr>
-<tr class="memdesc:a44578dd27650faf3c1ca708d9fa96c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">start main game loop - now every frame <a class="el" href="class_game_engine.html#a6936abd9f2ed9fdf1c183bc169b7c434" title="This function will be invoked on every world tick should be ovverided by the derriving class.">on_tick()</a> will be called <br /></td></tr>
+<tr class="memitem:a5ec491aa0b995609a19b852d7a50cee8"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a5ec491aa0b995609a19b852d7a50cee8">~GameEngine</a> ()</td></tr>
+<tr class="separator:a5ec491aa0b995609a19b852d7a50cee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44578dd27650faf3c1ca708d9fa96c07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a44578dd27650faf3c1ca708d9fa96c07">start_game_loop</a> ()</td></tr>
+<tr class="memdesc:a44578dd27650faf3c1ca708d9fa96c07"><td class="mdescLeft">&#160;</td><td class="mdescRight">start main game loop - now every frame <a class="el" href="class_game_engine.html#a6936abd9f2ed9fdf1c183bc169b7c434" title="This function will be invoked on every world tick should be ovverided by the derriving class.">on_tick()</a> will be called  <a href="class_game_engine.html#a44578dd27650faf3c1ca708d9fa96c07">More...</a><br /></td></tr>
 <tr class="separator:a44578dd27650faf3c1ca708d9fa96c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bf8603b58bd67a9a3a79b2f83a4ef2f"><td class="memItemLeft" align="right" valign="top"><a id="a2bf8603b58bd67a9a3a79b2f83a4ef2f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a2bf8603b58bd67a9a3a79b2f83a4ef2f">stop_game_loop</a> ()</td></tr>
-<tr class="memdesc:a2bf8603b58bd67a9a3a79b2f83a4ef2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">stopping the game loop - the <a class="el" href="class_game_engine.html#ab30d1764c6659eba50865e909ed6f3da" title="This function is called when the game ends should be ovverided by the derriving class.">on_end()</a> will be called next <br /></td></tr>
+<tr class="memitem:a2bf8603b58bd67a9a3a79b2f83a4ef2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#a2bf8603b58bd67a9a3a79b2f83a4ef2f">stop_game_loop</a> ()</td></tr>
+<tr class="memdesc:a2bf8603b58bd67a9a3a79b2f83a4ef2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">stopping the game loop - the <a class="el" href="class_game_engine.html#ab30d1764c6659eba50865e909ed6f3da" title="This function is called when the game ends should be ovverided by the derriving class.">on_end()</a> will be called next  <a href="class_game_engine.html#a2bf8603b58bd67a9a3a79b2f83a4ef2f">More...</a><br /></td></tr>
 <tr class="separator:a2bf8603b58bd67a9a3a79b2f83a4ef2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a97f0a1169218171ef3f9910ca68553c5"><td class="memItemLeft" align="right" valign="top"><a id="a97f0a1169218171ef3f9910ca68553c5"></a>
-struct <a class="el" href="struct_game_engine_1_1_config.html">GameEngine::Config</a>&#160;</td><td class="memItemRight" valign="bottom"><b>current_config_</b></td></tr>
-<tr class="separator:a97f0a1169218171ef3f9910ca68553c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7c59089dce2c6387ed59d174f0b687e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_renderer.html">Renderer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_engine.html#af7c59089dce2c6387ed59d174f0b687e">renderer_</a></td></tr>
+<tr class="separator:af7c59089dce2c6387ed59d174f0b687e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for custom game engines. </p>
 
-<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00009">9</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00013">13</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4f8a6b171d3977559ffd9a0bc20785bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f8a6b171d3977559ffd9a0bc20785bf">&#9670;&nbsp;</a></span>GameEngine() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameEngine::GameEngine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>We dont wanna allow creating <a class="el" href="class_game_engine.html" title="Base class for custom game engines.">GameEngine</a> without configuration. </p>
+
+</div>
+</div>
+<a id="a7320ddc69daeded79d1b0648e57a289f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7320ddc69daeded79d1b0648e57a289f">&#9670;&nbsp;</a></span>GameEngine() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameEngine::GameEngine </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_game_engine.html">GameEngine</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>We dont wanna allow copying our game engine. </p>
+
+</div>
+</div>
+<a id="a534b7882da1ceb4e14aba9012411a28a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a534b7882da1ceb4e14aba9012411a28a">&#9670;&nbsp;</a></span>GameEngine() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameEngine::GameEngine </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_game_engine_1_1_config.html">GameEngine::Config</a> &amp;&#160;</td>
+          <td class="paramname"><em>config</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>when we create a <a class="el" href="class_game_engine.html" title="Base class for custom game engines.">GameEngine</a> we always need to give it a config </p>
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00033">33</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+
+</div>
+</div>
+<a id="a5ec491aa0b995609a19b852d7a50cee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ec491aa0b995609a19b852d7a50cee8">&#9670;&nbsp;</a></span>~GameEngine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual GameEngine::~GameEngine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00066">66</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab30d1764c6659eba50865e909ed6f3da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab30d1764c6659eba50865e909ed6f3da">&#9670;&nbsp;</a></span>on_end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void GameEngine::on_end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function is called when the game ends should be ovverided by the derriving class. </p>
+
+<p>Implemented in <a class="el" href="class_game_of_life.html#aaee58c263e51332cd4188183d1e34578">GameOfLife</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_game_engine_ab30d1764c6659eba50865e909ed6f3da_icgraph.png" border="0" usemap="#aclass_game_engine_ab30d1764c6659eba50865e909ed6f3da_icgraph" alt=""/></div>
+<map name="aclass_game_engine_ab30d1764c6659eba50865e909ed6f3da_icgraph" id="aclass_game_engine_ab30d1764c6659eba50865e909ed6f3da_icgraph">
+<area shape="rect" title="This function is called when the game ends should be ovverided by the derriving class." alt="" coords="501,5,648,32"/>
+<area shape="rect" href="class_game_engine.html#ad0a8fdf4127a891e976b8d88e693f28a" title="game engine will start working" alt="" coords="276,5,453,32"/>
+<area shape="rect" href="class_game_of_life.html#a822e5412210202b1baab31944e4e5e9c" title="start the game engine" alt="" coords="104,5,228,32"/>
+<area shape="rect" href="main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a368522a8a9391ba9dc89a86799c6176b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a368522a8a9391ba9dc89a86799c6176b">&#9670;&nbsp;</a></span>on_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void GameEngine::on_start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function is called on game start should be overrided by the deriving class. </p>
+
+<p>Implemented in <a class="el" href="class_game_of_life.html#a9064fe10359ba9a66360606f92cf35d8">GameOfLife</a>.</p>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_game_engine_a368522a8a9391ba9dc89a86799c6176b_icgraph.png" border="0" usemap="#aclass_game_engine_a368522a8a9391ba9dc89a86799c6176b_icgraph" alt=""/></div>
+<map name="aclass_game_engine_a368522a8a9391ba9dc89a86799c6176b_icgraph" id="aclass_game_engine_a368522a8a9391ba9dc89a86799c6176b_icgraph">
+<area shape="rect" title="This function is called on game start should be overrided by the deriving class." alt="" coords="501,5,655,32"/>
+<area shape="rect" href="class_game_engine.html#ad0a8fdf4127a891e976b8d88e693f28a" title="game engine will start working" alt="" coords="276,5,453,32"/>
+<area shape="rect" href="class_game_of_life.html#a822e5412210202b1baab31944e4e5e9c" title="start the game engine" alt="" coords="104,5,228,32"/>
+<area shape="rect" href="main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6936abd9f2ed9fdf1c183bc169b7c434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6936abd9f2ed9fdf1c183bc169b7c434">&#9670;&nbsp;</a></span>on_tick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void GameEngine::on_tick </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function will be invoked on every world tick should be ovverided by the derriving class. </p>
+
+<p>Implemented in <a class="el" href="class_game_of_life.html#a5cd8f191fd9b69cc946a37d1a5eeb256">GameOfLife</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_game_engine_a6936abd9f2ed9fdf1c183bc169b7c434_icgraph.png" border="0" usemap="#aclass_game_engine_a6936abd9f2ed9fdf1c183bc169b7c434_icgraph" alt=""/></div>
+<map name="aclass_game_engine_a6936abd9f2ed9fdf1c183bc169b7c434_icgraph" id="aclass_game_engine_a6936abd9f2ed9fdf1c183bc169b7c434_icgraph">
+<area shape="rect" title="This function will be invoked on every world tick should be ovverided by the derriving class." alt="" coords="501,5,648,32"/>
+<area shape="rect" href="class_game_engine.html#ad0a8fdf4127a891e976b8d88e693f28a" title="game engine will start working" alt="" coords="276,5,453,32"/>
+<area shape="rect" href="class_game_of_life.html#a822e5412210202b1baab31944e4e5e9c" title="start the game engine" alt="" coords="104,5,228,32"/>
+<area shape="rect" href="main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a14d0ff681fe2a75c22e37073b7de1497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14d0ff681fe2a75c22e37073b7de1497">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_engine.html">GameEngine</a>&amp; GameEngine::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_game_engine.html">GameEngine</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0a8fdf4127a891e976b8d88e693f28a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a8fdf4127a891e976b8d88e693f28a">&#9670;&nbsp;</a></span>start_engine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void GameEngine::start_engine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">final</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>game engine will start working </p>
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00039">39</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_game_engine_ad0a8fdf4127a891e976b8d88e693f28a_cgraph.png" border="0" usemap="#aclass_game_engine_ad0a8fdf4127a891e976b8d88e693f28a_cgraph" alt=""/></div>
+<map name="aclass_game_engine_ad0a8fdf4127a891e976b8d88e693f28a_cgraph" id="aclass_game_engine_ad0a8fdf4127a891e976b8d88e693f28a_cgraph">
+<area shape="rect" title="game engine will start working" alt="" coords="5,56,183,83"/>
+<area shape="rect" href="class_game_engine.html#ab30d1764c6659eba50865e909ed6f3da" title="This function is called when the game ends should be ovverided by the derriving class." alt="" coords="234,5,381,32"/>
+<area shape="rect" href="class_game_engine.html#a368522a8a9391ba9dc89a86799c6176b" title="This function is called on game start should be overrided by the deriving class." alt="" coords="231,56,384,83"/>
+<area shape="rect" href="class_game_engine.html#a6936abd9f2ed9fdf1c183bc169b7c434" title="This function will be invoked on every world tick should be ovverided by the derriving class." alt="" coords="234,107,381,133"/>
+</map>
+</div>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_game_engine_ad0a8fdf4127a891e976b8d88e693f28a_icgraph.png" border="0" usemap="#aclass_game_engine_ad0a8fdf4127a891e976b8d88e693f28a_icgraph" alt=""/></div>
+<map name="aclass_game_engine_ad0a8fdf4127a891e976b8d88e693f28a_icgraph" id="aclass_game_engine_ad0a8fdf4127a891e976b8d88e693f28a_icgraph">
+<area shape="rect" title="game engine will start working" alt="" coords="276,5,453,32"/>
+<area shape="rect" href="class_game_of_life.html#a822e5412210202b1baab31944e4e5e9c" title="start the game engine" alt="" coords="104,5,228,32"/>
+<area shape="rect" href="main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a44578dd27650faf3c1ca708d9fa96c07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44578dd27650faf3c1ca708d9fa96c07">&#9670;&nbsp;</a></span>start_game_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::start_game_loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>start main game loop - now every frame <a class="el" href="class_game_engine.html#a6936abd9f2ed9fdf1c183bc169b7c434" title="This function will be invoked on every world tick should be ovverided by the derriving class.">on_tick()</a> will be called </p>
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00070">70</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_game_engine_a44578dd27650faf3c1ca708d9fa96c07_icgraph.png" border="0" usemap="#aclass_game_engine_a44578dd27650faf3c1ca708d9fa96c07_icgraph" alt=""/></div>
+<map name="aclass_game_engine_a44578dd27650faf3c1ca708d9fa96c07_icgraph" id="aclass_game_engine_a44578dd27650faf3c1ca708d9fa96c07_icgraph">
+<area shape="rect" title="start main game loop &#45; now every frame on_tick() will be called" alt="" coords="201,5,404,32"/>
+<area shape="rect" href="class_game_of_life.html#a9064fe10359ba9a66360606f92cf35d8" title="This function is called on game start should be overrided by the deriving class." alt="" coords="5,5,153,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2bf8603b58bd67a9a3a79b2f83a4ef2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf8603b58bd67a9a3a79b2f83a4ef2f">&#9670;&nbsp;</a></span>stop_game_loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameEngine::stop_game_loop </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>stopping the game loop - the <a class="el" href="class_game_engine.html#ab30d1764c6659eba50865e909ed6f3da" title="This function is called when the game ends should be ovverided by the derriving class.">on_end()</a> will be called next </p>
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00073">73</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a97f0a1169218171ef3f9910ca68553c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f0a1169218171ef3f9910ca68553c5">&#9670;&nbsp;</a></span>current_config_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_game_engine_1_1_config.html">GameEngine::Config</a> GameEngine::current_config_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7c59089dce2c6387ed59d174f0b687e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c59089dce2c6387ed59d174f0b687e">&#9670;&nbsp;</a></span>renderer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_renderer.html">Renderer</a>* GameEngine::renderer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_game_engine_8h_source.html#l00075">75</a> of file <a class="el" href="_game_engine_8h_source.html">GameEngine.h</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_game_engine_8h_source.html">GameEngine.h</a></li>
 </ul>
 </div><!-- contents -->
@@ -172,7 +615,7 @@ struct <a class="el" href="struct_game_engine_1_1_config.html">GameEngine::Confi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_game_engine.html">GameEngine</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Jun 14 2021 09:50:48 for Simple language by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

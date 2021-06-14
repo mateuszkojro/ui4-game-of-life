@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Game of life: Renderer Class Reference</title>
+<title>Simple language: Renderer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Game of life
+   <div id="projectname">Simple language
    </div>
   </td>
  </tr>
@@ -94,44 +94,92 @@ $(document).ready(function(){initNavTree('class_renderer.html',''); initResizabl
  <a href="class_renderer.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_renderer_8h_source.html">Renderer.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for Renderer:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="class_renderer.png" usemap="#Renderer_map" alt=""/>
-  <map id="Renderer_map" name="Renderer_map">
-<area href="class_simple_console_renderer.html" alt="SimpleConsoleRenderer" shape="rect" coords="0,56,148,80"/>
-  </map>
-</div></div>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for Renderer:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer__inherit__graph.png" border="0" usemap="#a_renderer_inherit__map" alt="Inheritance graph"/></div>
+<map name="a_renderer_inherit__map" id="a_renderer_inherit__map">
+<area shape="rect" title="Basic base class for all renderers." alt="" coords="9,5,164,215"/>
+<area shape="rect" href="class_simple_console_renderer.html" title=" " alt="" coords="5,263,168,340"/>
+</map>
+</div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for Renderer:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer__coll__graph.png" border="0" usemap="#a_renderer_coll__map" alt="Collaboration graph"/></div>
+<map name="a_renderer_coll__map" id="a_renderer_coll__map">
+<area shape="rect" title="Basic base class for all renderers." alt="" coords="5,5,160,215"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2fcbbfc652a92884fbe562421bdf3195"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a2fcbbfc652a92884fbe562421bdf3195">create_window</a> (int size_x, int size_y)=0</td></tr>
-<tr class="memdesc:a2fcbbfc652a92884fbe562421bdf3195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reszta API silnika graficznegos.  <a href="class_renderer.html#a2fcbbfc652a92884fbe562421bdf3195">More...</a><br /></td></tr>
+<tr class="memdesc:a2fcbbfc652a92884fbe562421bdf3195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates window of given size.  <a href="class_renderer.html#a2fcbbfc652a92884fbe562421bdf3195">More...</a><br /></td></tr>
 <tr class="separator:a2fcbbfc652a92884fbe562421bdf3195"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eae5319b3fdf9029e54c90d9de454e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a1eae5319b3fdf9029e54c90d9de454e7">draw_square</a> (const <a class="el" href="struct_coord.html">Coord</a> &amp;position, int size_x, int size_y, const Color &amp;fill)=0</td></tr>
+<tr class="memitem:a1eae5319b3fdf9029e54c90d9de454e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a1eae5319b3fdf9029e54c90d9de454e7">draw_square</a> (const <a class="el" href="struct_coord.html">Coord</a> &amp;position, int size_x, int size_y, const <a class="el" href="_renderer_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> &amp;fill)=0</td></tr>
 <tr class="memdesc:a1eae5319b3fdf9029e54c90d9de454e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws a square on position wit size and fill.  <a href="class_renderer.html#a1eae5319b3fdf9029e54c90d9de454e7">More...</a><br /></td></tr>
 <tr class="separator:a1eae5319b3fdf9029e54c90d9de454e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a997929e96cd42b01782a831dac275271"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a997929e96cd42b01782a831dac275271">set_pixel</a> (const <a class="el" href="struct_coord.html">Coord</a> &amp;position, const Color &amp;fill)=0</td></tr>
+<tr class="memitem:a997929e96cd42b01782a831dac275271"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a997929e96cd42b01782a831dac275271">set_pixel</a> (const <a class="el" href="struct_coord.html">Coord</a> &amp;position, const <a class="el" href="_renderer_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> &amp;fill)=0</td></tr>
 <tr class="separator:a997929e96cd42b01782a831dac275271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81392138fe1bed03fe1dd63d33319d7b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a81392138fe1bed03fe1dd63d33319d7b">clear_screen</a> (const Color &amp;fill)=0</td></tr>
-<tr class="memdesc:a81392138fe1bed03fe1dd63d33319d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill all screan with defined color.  <a href="class_renderer.html#a81392138fe1bed03fe1dd63d33319d7b">More...</a><br /></td></tr>
+<tr class="memitem:a81392138fe1bed03fe1dd63d33319d7b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a81392138fe1bed03fe1dd63d33319d7b">clear_screen</a> (const <a class="el" href="_renderer_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> &amp;fill)=0</td></tr>
+<tr class="memdesc:a81392138fe1bed03fe1dd63d33319d7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill all screen with defined color.  <a href="class_renderer.html#a81392138fe1bed03fe1dd63d33319d7b">More...</a><br /></td></tr>
 <tr class="separator:a81392138fe1bed03fe1dd63d33319d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14ffe2ec0d23d62e122e266d21d64c1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#ac14ffe2ec0d23d62e122e266d21d64c1">show_text_big</a> (const <a class="el" href="struct_coord.html">Coord</a> &amp;position, const std::string &amp;text)=0</td></tr>
+<tr class="separator:ac14ffe2ec0d23d62e122e266d21d64c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4270c45781220f783d17d87655ea7f3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#aa4270c45781220f783d17d87655ea7f3">show_text_medium</a> (const <a class="el" href="struct_coord.html">Coord</a> &amp;position, const std::string &amp;text)=0</td></tr>
+<tr class="separator:aa4270c45781220f783d17d87655ea7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999c7815ebac4ce95c0c4c3aa7761087"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a999c7815ebac4ce95c0c4c3aa7761087">show_text_small</a> (const <a class="el" href="struct_coord.html">Coord</a> &amp;position, const std::string &amp;text)=0</td></tr>
+<tr class="separator:a999c7815ebac4ce95c0c4c3aa7761087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6b129fc84befe052eab82542aa88f61"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#aa6b129fc84befe052eab82542aa88f61">render</a> ()=0</td></tr>
+<tr class="separator:aa6b129fc84befe052eab82542aa88f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add2012f269f157754034e7b5475a8927"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#add2012f269f157754034e7b5475a8927">~Renderer</a> ()=default</td></tr>
+<tr class="separator:add2012f269f157754034e7b5475a8927"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a143ee55e93aa1b9d9c71040edf04816e"><td class="memItemLeft" align="right" valign="top"><a id="a143ee55e93aa1b9d9c71040edf04816e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>width_</b></td></tr>
+<tr class="memitem:a143ee55e93aa1b9d9c71040edf04816e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#a143ee55e93aa1b9d9c71040edf04816e">width_</a></td></tr>
+<tr class="memdesc:a143ee55e93aa1b9d9c71040edf04816e"><td class="mdescLeft">&#160;</td><td class="mdescRight">width of the render plane  <a href="class_renderer.html#a143ee55e93aa1b9d9c71040edf04816e">More...</a><br /></td></tr>
 <tr class="separator:a143ee55e93aa1b9d9c71040edf04816e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc1dad1cf76ce33e90e59efc7dc9474d"><td class="memItemLeft" align="right" valign="top"><a id="adc1dad1cf76ce33e90e59efc7dc9474d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>height_</b></td></tr>
+<tr class="memitem:adc1dad1cf76ce33e90e59efc7dc9474d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_renderer.html#adc1dad1cf76ce33e90e59efc7dc9474d">height_</a></td></tr>
+<tr class="memdesc:adc1dad1cf76ce33e90e59efc7dc9474d"><td class="mdescLeft">&#160;</td><td class="mdescRight">height of the render plane  <a href="class_renderer.html#adc1dad1cf76ce33e90e59efc7dc9474d">More...</a><br /></td></tr>
 <tr class="separator:adc1dad1cf76ce33e90e59efc7dc9474d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Basic base class for all renderers. </p>
 
-<p class="definition">Definition at line <a class="el" href="_renderer_8h_source.html#l00024">24</a> of file <a class="el" href="_renderer_8h_source.html">Renderer.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="_renderer_8h_source.html#l00029">29</a> of file <a class="el" href="_renderer_8h_source.html">Renderer.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="add2012f269f157754034e7b5475a8927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add2012f269f157754034e7b5475a8927">&#9670;&nbsp;</a></span>~Renderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Renderer::~Renderer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a81392138fe1bed03fe1dd63d33319d7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81392138fe1bed03fe1dd63d33319d7b">&#9670;&nbsp;</a></span>clear_screen()</h2>
 
@@ -144,7 +192,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>height_</b></td></tr>
         <tr>
           <td class="memname">virtual void Renderer::clear_screen </td>
           <td>(</td>
-          <td class="paramtype">const Color &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_renderer_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>fill</em></td><td>)</td>
           <td></td>
         </tr>
@@ -156,7 +204,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>height_</b></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Fill all screan with defined color. </p>
+<p>Fill all screen with defined color. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Color</td><td>color to fill the screen with </td></tr>
@@ -200,14 +248,25 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>height_</b></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reszta API silnika graficznegos. </p>
-<p>Creates window of given size </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Creates window of given size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">int</td><td>Size in x dimention </td></tr>
-    <tr><td class="paramname">int</td><td>Size in y dimention </td></tr>
+    <tr><td class="paramname">int</td><td>Size in x dimension </td></tr>
+    <tr><td class="paramname">int</td><td>Size in y dimension </td></tr>
   </table>
   </dd>
 </dl>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_a2fcbbfc652a92884fbe562421bdf3195_icgraph.png" border="0" usemap="#aclass_renderer_a2fcbbfc652a92884fbe562421bdf3195_icgraph" alt=""/></div>
+<map name="aclass_renderer_a2fcbbfc652a92884fbe562421bdf3195_icgraph" id="aclass_renderer_a2fcbbfc652a92884fbe562421bdf3195_icgraph">
+<area shape="rect" title="Creates window of given size." alt="" coords="201,5,371,32"/>
+<area shape="rect" href="class_game_of_life.html#a9064fe10359ba9a66360606f92cf35d8" title="This function is called on game start should be overrided by the deriving class." alt="" coords="5,5,153,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -241,7 +300,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>height_</b></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Color &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_renderer_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>fill</em>&#160;</td>
         </tr>
         <tr>
@@ -260,13 +319,49 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>height_</b></td></tr>
 <p>Draws a square on position wit size and fill. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="struct_coord.html" title="Struct containing coordinates of difrent objects.">Coord</a></td><td>position </td></tr>
+    <tr><td class="paramname"><a class="el" href="struct_coord.html" title="Struct containing coordinates of different objects.">Coord</a></td><td>position </td></tr>
     <tr><td class="paramname">size</td><td>in x axis </td></tr>
     <tr><td class="paramname">size</td><td>in y axis </td></tr>
     <tr><td class="paramname">Color</td><td>color to fill square with </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aa6b129fc84befe052eab82542aa88f61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b129fc84befe052eab82542aa88f61">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Renderer::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_aa6b129fc84befe052eab82542aa88f61_icgraph.png" border="0" usemap="#aclass_renderer_aa6b129fc84befe052eab82542aa88f61_icgraph" alt=""/></div>
+<map name="aclass_renderer_aa6b129fc84befe052eab82542aa88f61_icgraph" id="aclass_renderer_aa6b129fc84befe052eab82542aa88f61_icgraph">
+<area shape="rect" title=" " alt="" coords="189,13,308,39"/>
+<area shape="rect" href="class_game_of_life.html#a0a93590ec8cb61e8ac932ed860afdca8" title="render current_board_" alt="" coords="5,5,141,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -288,7 +383,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>height_</b></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Color &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="_renderer_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> &amp;&#160;</td>
           <td class="paramname"><em>fill</em>&#160;</td>
         </tr>
         <tr>
@@ -305,11 +400,215 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>height_</b></td></tr>
 </div><div class="memdoc">
 <p>Sets the position at given coordinate to given Color </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">position</td><td>const <a class="el" href="struct_coord.html" title="Struct containing coordinates of difrent objects.">Coord</a>&amp; position of the pixels to be set </td></tr>
+    <tr><td class="paramname">position</td><td>const <a class="el" href="struct_coord.html" title="Struct containing coordinates of different objects.">Coord</a>&amp; position of the pixels to be set </td></tr>
     <tr><td class="paramname">fill</td><td>The color to set the pixel to </td></tr>
   </table>
   </dd>
 </dl>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_a997929e96cd42b01782a831dac275271_icgraph.png" border="0" usemap="#aclass_renderer_a997929e96cd42b01782a831dac275271_icgraph" alt=""/></div>
+<map name="aclass_renderer_a997929e96cd42b01782a831dac275271_icgraph" id="aclass_renderer_a997929e96cd42b01782a831dac275271_icgraph">
+<area shape="rect" title=" " alt="" coords="189,13,323,39"/>
+<area shape="rect" href="class_game_of_life.html#a0a93590ec8cb61e8ac932ed860afdca8" title="render current_board_" alt="" coords="5,5,141,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac14ffe2ec0d23d62e122e266d21d64c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac14ffe2ec0d23d62e122e266d21d64c1">&#9670;&nbsp;</a></span>show_text_big()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Renderer::show_text_big </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_coord.html">Coord</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Show text in big letters on position </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td><a class="el" href="struct_coord.html" title="Struct containing coordinates of different objects.">Coord</a> of the beginning of the text </td></tr>
+    <tr><td class="paramname">text</td><td>text to be printed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa4270c45781220f783d17d87655ea7f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4270c45781220f783d17d87655ea7f3">&#9670;&nbsp;</a></span>show_text_medium()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Renderer::show_text_medium </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_coord.html">Coord</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Show text in medium letters on position </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td><a class="el" href="struct_coord.html" title="Struct containing coordinates of different objects.">Coord</a> of the beginning of the text </td></tr>
+    <tr><td class="paramname">text</td><td>text to be printed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a999c7815ebac4ce95c0c4c3aa7761087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a999c7815ebac4ce95c0c4c3aa7761087">&#9670;&nbsp;</a></span>show_text_small()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Renderer::show_text_small </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_coord.html">Coord</a> &amp;&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Show text in small letters on position </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td><a class="el" href="struct_coord.html" title="Struct containing coordinates of different objects.">Coord</a> of the beginning of the text </td></tr>
+    <tr><td class="paramname">text</td><td>text to be printed </td></tr>
+  </table>
+  </dd>
+</dl>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_renderer_a999c7815ebac4ce95c0c4c3aa7761087_icgraph.png" border="0" usemap="#aclass_renderer_a999c7815ebac4ce95c0c4c3aa7761087_icgraph" alt=""/></div>
+<map name="aclass_renderer_a999c7815ebac4ce95c0c4c3aa7761087_icgraph" id="aclass_renderer_a999c7815ebac4ce95c0c4c3aa7761087_icgraph">
+<area shape="rect" title=" " alt="" coords="196,5,339,47"/>
+<area shape="rect" href="class_game_of_life.html#aaee58c263e51332cd4188183d1e34578" title="This function is called when the game ends should be ovverided by the derriving class." alt="" coords="5,13,148,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="adc1dad1cf76ce33e90e59efc7dc9474d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc1dad1cf76ce33e90e59efc7dc9474d">&#9670;&nbsp;</a></span>height_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Renderer::height_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>height of the render plane </p>
+
+<p class="definition">Definition at line <a class="el" href="_renderer_8h_source.html#l00076">76</a> of file <a class="el" href="_renderer_8h_source.html">Renderer.h</a>.</p>
+
+</div>
+</div>
+<a id="a143ee55e93aa1b9d9c71040edf04816e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a143ee55e93aa1b9d9c71040edf04816e">&#9670;&nbsp;</a></span>width_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Renderer::width_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>width of the render plane </p>
+
+<p class="definition">Definition at line <a class="el" href="_renderer_8h_source.html#l00074">74</a> of file <a class="el" href="_renderer_8h_source.html">Renderer.h</a>.</p>
 
 </div>
 </div>
@@ -322,7 +621,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>height_</b></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_renderer.html">Renderer</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Jun 14 2021 09:50:48 for Simple language by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

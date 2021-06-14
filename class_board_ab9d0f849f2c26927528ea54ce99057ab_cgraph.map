@@ -1,0 +1,4 @@
+<map id="Board::save_board" name="Board::save_board">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node2" href="$class_board.html#aef56e7309b843fdb2906727dce21e74a" title="Return the size of the underlying array (width * height)" alt="" coords="184,5,271,32"/>
+</map>

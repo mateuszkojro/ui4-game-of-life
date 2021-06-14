@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Game of life: Board Class Reference</title>
+<title>Simple language: Board Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Game of life
+   <div id="projectname">Simple language
    </div>
   </td>
  </tr>
@@ -91,40 +91,58 @@ $(document).ready(function(){initNavTree('class_board.html',''); initResizable()
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_board_8h_source.html">Board.h</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for Board:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_board__coll__graph.png" border="0" usemap="#a_board_coll__map" alt="Collaboration graph"/></div>
+<map name="a_board_coll__map" id="a_board_coll__map">
+<area shape="rect" title=" " alt="" coords="5,5,136,259"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a3e11ce152fab26acaabf423f86edef2e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a3e11ce152fab26acaabf423f86edef2e">Board</a> ()=delete</td></tr>
+<tr class="separator:a3e11ce152fab26acaabf423f86edef2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c883a0d65a07e5b793f512e190719ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a5c883a0d65a07e5b793f512e190719ac">fill</a> (bool value)</td></tr>
+<tr class="separator:a5c883a0d65a07e5b793f512e190719ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a651880af36910ad135629b737a6c8640"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a651880af36910ad135629b737a6c8640">operator()</a> (int x, int y)</td></tr>
 <tr class="separator:a651880af36910ad135629b737a6c8640"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55bb33e89a7f4af737904a3e67f89a76"><td class="memItemLeft" align="right" valign="top"><a id="a55bb33e89a7f4af737904a3e67f89a76"></a>
-bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> (int i)</td></tr>
+<tr class="memitem:a55bb33e89a7f4af737904a3e67f89a76"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a55bb33e89a7f4af737904a3e67f89a76">operator()</a> (int i)</td></tr>
 <tr class="separator:a55bb33e89a7f4af737904a3e67f89a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31e0fed9e3b0107286f1b222c06895ac"><td class="memItemLeft" align="right" valign="top">std::array&lt; bool *, 9 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a31e0fed9e3b0107286f1b222c06895ac">get_neighbours</a> (int x, int y)</td></tr>
-<tr class="separator:a31e0fed9e3b0107286f1b222c06895ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3ac62dfc00ea77cf6d6fcc78dc88837"><td class="memItemLeft" align="right" valign="top"><a id="ae3ac62dfc00ea77cf6d6fcc78dc88837"></a>
-std::array&lt; bool *, 9 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_neighbours</b> (int i)</td></tr>
-<tr class="separator:ae3ac62dfc00ea77cf6d6fcc78dc88837"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a948ba5964eec3765977e0fa054f98af2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a948ba5964eec3765977e0fa054f98af2">get_size_x</a> () const</td></tr>
-<tr class="separator:a948ba5964eec3765977e0fa054f98af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8ddd3ec38864ec3aab23cf342e54847"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#ae8ddd3ec38864ec3aab23cf342e54847">get_size_y</a> () const</td></tr>
-<tr class="separator:ae8ddd3ec38864ec3aab23cf342e54847"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c86b3ebbe5572f611b473f39fd9ff0e"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a9c86b3ebbe5572f611b473f39fd9ff0e">operator()</a> (int x, int y) const</td></tr>
+<tr class="memdesc:a9c86b3ebbe5572f611b473f39fd9ff0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">const qualified version <a class="el" href="class_board.html#a651880af36910ad135629b737a6c8640">operator()(int, int)</a>;  <a href="class_board.html#a9c86b3ebbe5572f611b473f39fd9ff0e">More...</a><br /></td></tr>
+<tr class="separator:a9c86b3ebbe5572f611b473f39fd9ff0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd8741f3ab3593f140757d6a125f5fae"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#afd8741f3ab3593f140757d6a125f5fae">operator()</a> (int i) const</td></tr>
+<tr class="memdesc:afd8741f3ab3593f140757d6a125f5fae"><td class="mdescLeft">&#160;</td><td class="mdescRight">const qualified version <a class="el" href="class_board.html#a55bb33e89a7f4af737904a3e67f89a76">operator()(int)</a>;  <a href="class_board.html#afd8741f3ab3593f140757d6a125f5fae">More...</a><br /></td></tr>
+<tr class="separator:afd8741f3ab3593f140757d6a125f5fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc481057427765313083fec52db56bf9"><td class="memItemLeft" align="right" valign="top">std::array&lt; bool, 9 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#adc481057427765313083fec52db56bf9">get_neighbours</a> (int x, int y)</td></tr>
+<tr class="separator:adc481057427765313083fec52db56bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382db73418b959fc812ea7827c46b845"><td class="memItemLeft" align="right" valign="top">std::array&lt; bool, 9 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a382db73418b959fc812ea7827c46b845">get_neighbours</a> (int i)</td></tr>
+<tr class="separator:a382db73418b959fc812ea7827c46b845"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafb469dc3247ae5ae92e85fd25e165d9"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#aafb469dc3247ae5ae92e85fd25e165d9">size_x</a> () const</td></tr>
+<tr class="separator:aafb469dc3247ae5ae92e85fd25e165d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172ea330a3ed7482691ecdac894fe10b"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a172ea330a3ed7482691ecdac894fe10b">size_y</a> () const</td></tr>
+<tr class="separator:a172ea330a3ed7482691ecdac894fe10b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf078610c0bed476147608f13f37d54b"><td class="memItemLeft" align="right" valign="top">bool *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#aaf078610c0bed476147608f13f37d54b">get_board</a> () const</td></tr>
 <tr class="separator:aaf078610c0bed476147608f13f37d54b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d2674f4f4332bcbe83e96873888eb4e"><td class="memItemLeft" align="right" valign="top"><a id="a0d2674f4f4332bcbe83e96873888eb4e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Board</b> (bool *board, size_t x, size_t y)</td></tr>
+<tr class="memitem:a0d2674f4f4332bcbe83e96873888eb4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a0d2674f4f4332bcbe83e96873888eb4e">Board</a> (bool *board, size_t x, size_t y)</td></tr>
 <tr class="separator:a0d2674f4f4332bcbe83e96873888eb4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af23f785e7c9d49271672c79c09cfa4e6"><td class="memItemLeft" align="right" valign="top"><a id="af23f785e7c9d49271672c79c09cfa4e6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Board</b> (const <a class="el" href="class_board.html">Board</a> &amp;other)</td></tr>
+<tr class="memitem:abaf20d1a6113eb7d4ae7ef376d1aa474"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#abaf20d1a6113eb7d4ae7ef376d1aa474">Board</a> (size_t x, size_t y)</td></tr>
+<tr class="separator:abaf20d1a6113eb7d4ae7ef376d1aa474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af23f785e7c9d49271672c79c09cfa4e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#af23f785e7c9d49271672c79c09cfa4e6">Board</a> (const <a class="el" href="class_board.html">Board</a> &amp;other)</td></tr>
 <tr class="separator:af23f785e7c9d49271672c79c09cfa4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4af6f7f3d1134a09789570bbc8d659cb"><td class="memItemLeft" align="right" valign="top"><a id="a4af6f7f3d1134a09789570bbc8d659cb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Board</b> (<a class="el" href="class_board.html">Board</a> &amp;&amp;other)</td></tr>
-<tr class="separator:a4af6f7f3d1134a09789570bbc8d659cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac9d1dcfeaf6758caec5c64794e4cee25"><td class="memItemLeft" align="right" valign="top"><a id="ac9d1dcfeaf6758caec5c64794e4cee25"></a>
-<a class="el" href="class_board.html">Board</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_board.html">Board</a> &amp;)</td></tr>
-<tr class="separator:ac9d1dcfeaf6758caec5c64794e4cee25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adae37a19cc1f82c3ad84da393cb6a54a"><td class="memItemLeft" align="right" valign="top"><a id="adae37a19cc1f82c3ad84da393cb6a54a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> () const</td></tr>
-<tr class="separator:adae37a19cc1f82c3ad84da393cb6a54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19733c5733bf14c6fb69327a19f69b99"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a19733c5733bf14c6fb69327a19f69b99">Board</a> (<a class="el" href="class_board.html">Board</a> &amp;&amp;other) noexcept</td></tr>
+<tr class="separator:a19733c5733bf14c6fb69327a19f69b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4554f8481e93b392dbc1c0ff0124a5f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_board.html">Board</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#a4554f8481e93b392dbc1c0ff0124a5f5">operator=</a> (const <a class="el" href="class_board.html">Board</a> &amp;)</td></tr>
+<tr class="separator:a4554f8481e93b392dbc1c0ff0124a5f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef56e7309b843fdb2906727dce21e74a"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#aef56e7309b843fdb2906727dce21e74a">size</a> () const</td></tr>
+<tr class="memdesc:aef56e7309b843fdb2906727dce21e74a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the size of the underlying array (width * height)  <a href="class_board.html#aef56e7309b843fdb2906727dce21e74a">More...</a><br /></td></tr>
+<tr class="separator:aef56e7309b843fdb2906727dce21e74a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af73f45730119a1fd8f6670f53f959e68"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_board.html#af73f45730119a1fd8f6670f53f959e68">~Board</a> ()</td></tr>
+<tr class="separator:af73f45730119a1fd8f6670f53f959e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -137,7 +155,234 @@ Static Public Member Functions</h2></td></tr>
 <div class="textblock"><p>Class containing board (bool array) with functions useful for the implementation of the game of life </p>
 
 <p class="definition">Definition at line <a class="el" href="_board_8h_source.html#l00014">14</a> of file <a class="el" href="_board_8h_source.html">Board.h</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3e11ce152fab26acaabf423f86edef2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e11ce152fab26acaabf423f86edef2e">&#9670;&nbsp;</a></span>Board() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::Board </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_board_a3e11ce152fab26acaabf423f86edef2e_icgraph.png" border="0" usemap="#aclass_board_a3e11ce152fab26acaabf423f86edef2e_icgraph" alt=""/></div>
+<map name="aclass_board_a3e11ce152fab26acaabf423f86edef2e_icgraph" id="aclass_board_a3e11ce152fab26acaabf423f86edef2e_icgraph">
+<area shape="rect" title=" " alt="" coords="180,5,279,32"/>
+<area shape="rect" href="class_board.html#ab2c117760cd2012e6cd67751069737e9" title=" " alt="" coords="5,5,132,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0d2674f4f4332bcbe83e96873888eb4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d2674f4f4332bcbe83e96873888eb4e">&#9670;&nbsp;</a></span>Board() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::Board </td>
+          <td>(</td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>board</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00009">9</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+
+</div>
+</div>
+<a id="abaf20d1a6113eb7d4ae7ef376d1aa474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abaf20d1a6113eb7d4ae7ef376d1aa474">&#9670;&nbsp;</a></span>Board() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::Board </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00015">15</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+
+</div>
+</div>
+<a id="af23f785e7c9d49271672c79c09cfa4e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af23f785e7c9d49271672c79c09cfa4e6">&#9670;&nbsp;</a></span>Board() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::Board </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_board.html">Board</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00105">105</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+
+</div>
+</div>
+<a id="a19733c5733bf14c6fb69327a19f69b99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19733c5733bf14c6fb69327a19f69b99">&#9670;&nbsp;</a></span>Board() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::Board </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_board.html">Board</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00116">116</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+
+</div>
+</div>
+<a id="af73f45730119a1fd8f6670f53f959e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af73f45730119a1fd8f6670f53f959e68">&#9670;&nbsp;</a></span>~Board()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Board::~Board </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00019">19</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5c883a0d65a07e5b793f512e190719ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c883a0d65a07e5b793f512e190719ac">&#9670;&nbsp;</a></span>fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Board::fill </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Fils the board wirh specified value </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>to fill the buffer with </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00032">32</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_board_a5c883a0d65a07e5b793f512e190719ac_cgraph.png" border="0" usemap="#aclass_board_a5c883a0d65a07e5b793f512e190719ac_cgraph" alt=""/></div>
+<map name="aclass_board_a5c883a0d65a07e5b793f512e190719ac_cgraph" id="aclass_board_a5c883a0d65a07e5b793f512e190719ac_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,83,57"/>
+<area shape="rect" href="class_board.html#a651880af36910ad135629b737a6c8640" title=" " alt="" coords="131,5,249,32"/>
+<area shape="rect" href="class_board.html#aef56e7309b843fdb2906727dce21e74a" title="Return the size of the underlying array (width * height)" alt="" coords="147,56,233,83"/>
+</map>
+</div>
+<div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_board_a5c883a0d65a07e5b793f512e190719ac_icgraph.png" border="0" usemap="#aclass_board_a5c883a0d65a07e5b793f512e190719ac_icgraph" alt=""/></div>
+<map name="aclass_board_a5c883a0d65a07e5b793f512e190719ac_icgraph" id="aclass_board_a5c883a0d65a07e5b793f512e190719ac_icgraph">
+<area shape="rect" title=" " alt="" coords="104,5,181,32"/>
+<area shape="rect" href="main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="aaf078610c0bed476147608f13f37d54b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf078610c0bed476147608f13f37d54b">&#9670;&nbsp;</a></span>get_board()</h2>
 
@@ -154,18 +399,44 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get the ptr to bool array </p><dl class="section return"><dt>Returns</dt><dd>ptr to bool array containing board data </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00026">26</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00038">38</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
 
 </div>
 </div>
-<a id="a31e0fed9e3b0107286f1b222c06895ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31e0fed9e3b0107286f1b222c06895ac">&#9670;&nbsp;</a></span>get_neighbours()</h2>
+<a id="a382db73418b959fc812ea7827c46b845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a382db73418b959fc812ea7827c46b845">&#9670;&nbsp;</a></span>get_neighbours() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::array&lt; bool *, 9 &gt; Board::get_neighbours </td>
+          <td class="memname">std::array&lt; bool, 9 &gt; Board::get_neighbours </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>its an analog for <a class="el" href="class_board.html#adc481057427765313083fec52db56bf9">get_neighbours(int x, int y)</a>; returns array of pairs to neighbours Some might be null </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>address of the underlying array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00046">46</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+
+</div>
+</div>
+<a id="adc481057427765313083fec52db56bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc481057427765313083fec52db56bf9">&#9670;&nbsp;</a></span>get_neighbours() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; bool, 9 &gt; Board::get_neighbours </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>x</em>, </td>
@@ -183,56 +454,27 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Rerturns array of ptrs to neighbours Some might be null </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Returns array of pairs to neighbours Some might be null </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>x coordinate </td></tr>
-    <tr><td class="paramname">y</td><td>y coordinare </td></tr>
+    <tr><td class="paramname">y</td><td>y coordinate </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>array of ptrs to neighbour cells (some might be null) </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>array of pointers to neighbour cells (some might be null) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00034">34</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
-
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00042">42</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_board_adc481057427765313083fec52db56bf9_icgraph.png" border="0" usemap="#aclass_board_adc481057427765313083fec52db56bf9_icgraph" alt=""/></div>
+<map name="aclass_board_adc481057427765313083fec52db56bf9_icgraph" id="aclass_board_adc481057427765313083fec52db56bf9_icgraph">
+<area shape="rect" title=" " alt="" coords="196,5,349,32"/>
+<area shape="rect" href="class_game_of_life.html#a5cd8f191fd9b69cc946a37d1a5eeb256" title="This function will be invoked on every world tick should be ovverided by the derriving class." alt="" coords="5,5,148,32"/>
+</map>
 </div>
-<a id="a948ba5964eec3765977e0fa054f98af2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a948ba5964eec3765977e0fa054f98af2">&#9670;&nbsp;</a></span>get_size_x()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t Board::get_size_x </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Return size in x axis </p><dl class="section return"><dt>Returns</dt><dd>width of the <a class="el" href="class_board.html">Board</a> </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00018">18</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
-
-</div>
-</div>
-<a id="ae8ddd3ec38864ec3aab23cf342e54847"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8ddd3ec38864ec3aab23cf342e54847">&#9670;&nbsp;</a></span>get_size_y()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t Board::get_size_y </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Return size in y axis </p><dl class="section return"><dt>Returns</dt><dd>height in y axis </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00022">22</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
 
 </div>
 </div>
@@ -259,14 +501,81 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Load board from the file Path to the file containing the <a class="el" href="class_board.html">Board</a> </p>
+<p>Load board from the file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Path</td><td>to the file containing the <a class="el" href="class_board.html">Board</a> </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00042">42</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00082">82</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_board_ab2c117760cd2012e6cd67751069737e9_cgraph.png" border="0" usemap="#aclass_board_ab2c117760cd2012e6cd67751069737e9_cgraph" alt=""/></div>
+<map name="aclass_board_ab2c117760cd2012e6cd67751069737e9_cgraph" id="aclass_board_ab2c117760cd2012e6cd67751069737e9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,132,83"/>
+<area shape="rect" href="class_board.html#a3e11ce152fab26acaabf423f86edef2e" title=" " alt="" coords="181,5,280,32"/>
+<area shape="rect" href="class_board.html#aafb469dc3247ae5ae92e85fd25e165d9" title=" " alt="" coords="180,56,281,83"/>
+<area shape="rect" href="class_board.html#a172ea330a3ed7482691ecdac894fe10b" title=" " alt="" coords="180,107,281,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a55bb33e89a7f4af737904a3e67f89a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55bb33e89a7f4af737904a3e67f89a76">&#9670;&nbsp;</a></span>operator()() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; Board::operator() </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Accesses element of underlying arr </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Access the ith element of underlying arr </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>reference to given field </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00148">148</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+
+</div>
+</div>
+<a id="afd8741f3ab3593f140757d6a125f5fae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd8741f3ab3593f140757d6a125f5fae">&#9670;&nbsp;</a></span>operator()() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; Board::operator() </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>const qualified version <a class="el" href="class_board.html#a55bb33e89a7f4af737904a3e67f89a76">operator()(int)</a>; </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00156">156</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
 
 </div>
 </div>
 <a id="a651880af36910ad135629b737a6c8640"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a651880af36910ad135629b737a6c8640">&#9670;&nbsp;</a></span>operator()()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a651880af36910ad135629b737a6c8640">&#9670;&nbsp;</a></span>operator()() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +599,7 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Accesses element of undderyling arr </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Accesses element of underlying arr </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">x</td><td>x coordinate </td></tr>
     <tr><td class="paramname">y</td><td>y coordinate </td></tr>
@@ -299,7 +608,83 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>reference to given field </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00030">30</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00152">152</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_board_a651880af36910ad135629b737a6c8640_icgraph.png" border="0" usemap="#aclass_board_a651880af36910ad135629b737a6c8640_icgraph" alt=""/></div>
+<map name="aclass_board_a651880af36910ad135629b737a6c8640_icgraph" id="aclass_board_a651880af36910ad135629b737a6c8640_icgraph">
+<area shape="rect" title=" " alt="" coords="271,31,389,57"/>
+<area shape="rect" href="class_board.html#a5c883a0d65a07e5b793f512e190719ac" title=" " alt="" coords="125,5,202,32"/>
+<area shape="rect" href="class_board.html#a9c86b3ebbe5572f611b473f39fd9ff0e" title="const qualified version operator()(int, int);" alt="" coords="104,56,223,83"/>
+<area shape="rect" href="main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9c86b3ebbe5572f611b473f39fd9ff0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c86b3ebbe5572f611b473f39fd9ff0e">&#9670;&nbsp;</a></span>operator()() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; Board::operator() </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>const qualified version <a class="el" href="class_board.html#a651880af36910ad135629b737a6c8640">operator()(int, int)</a>; </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00160">160</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<div id="dynsection-7" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-7-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-7-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-7-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_board_a9c86b3ebbe5572f611b473f39fd9ff0e_cgraph.png" border="0" usemap="#aclass_board_a9c86b3ebbe5572f611b473f39fd9ff0e_cgraph" alt=""/></div>
+<map name="aclass_board_a9c86b3ebbe5572f611b473f39fd9ff0e_cgraph" id="aclass_board_a9c86b3ebbe5572f611b473f39fd9ff0e_cgraph">
+<area shape="rect" title="const qualified version operator()(int, int);" alt="" coords="5,5,124,32"/>
+<area shape="rect" href="class_board.html#a651880af36910ad135629b737a6c8640" title=" " alt="" coords="172,5,291,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4554f8481e93b392dbc1c0ff0124a5f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4554f8481e93b392dbc1c0ff0124a5f5">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_board.html">Board</a> &amp; Board::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_board.html">Board</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00124">124</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
 
 </div>
 </div>
@@ -316,7 +701,7 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">void Board::save_board </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_board.html">Board</a> &amp;&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>board</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -344,7 +729,119 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00045">45</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00095">95</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<div id="dynsection-8" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-8-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-8-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-8-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_board_ab9d0f849f2c26927528ea54ce99057ab_cgraph.png" border="0" usemap="#aclass_board_ab9d0f849f2c26927528ea54ce99057ab_cgraph" alt=""/></div>
+<map name="aclass_board_ab9d0f849f2c26927528ea54ce99057ab_cgraph" id="aclass_board_ab9d0f849f2c26927528ea54ce99057ab_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" href="class_board.html#aef56e7309b843fdb2906727dce21e74a" title="Return the size of the underlying array (width * height)" alt="" coords="184,5,271,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aef56e7309b843fdb2906727dce21e74a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef56e7309b843fdb2906727dce21e74a">&#9670;&nbsp;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned Board::size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the size of the underlying array (width * height) </p>
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00131">131</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<div id="dynsection-9" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-9-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-9-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-9-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_board_aef56e7309b843fdb2906727dce21e74a_icgraph.png" border="0" usemap="#aclass_board_aef56e7309b843fdb2906727dce21e74a_icgraph" alt=""/></div>
+<map name="aclass_board_aef56e7309b843fdb2906727dce21e74a_icgraph" id="aclass_board_aef56e7309b843fdb2906727dce21e74a_icgraph">
+<area shape="rect" title="Return the size of the underlying array (width * height)" alt="" coords="295,56,381,83"/>
+<area shape="rect" href="class_board.html#a5c883a0d65a07e5b793f512e190719ac" title=" " alt="" coords="137,5,214,32"/>
+<area shape="rect" href="class_game_of_life.html#a5cd8f191fd9b69cc946a37d1a5eeb256" title="This function will be invoked on every world tick should be ovverided by the derriving class." alt="" coords="104,56,247,83"/>
+<area shape="rect" href="class_board.html#ab9d0f849f2c26927528ea54ce99057ab" title=" " alt="" coords="110,107,241,133"/>
+<area shape="rect" href="main_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aafb469dc3247ae5ae92e85fd25e165d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafb469dc3247ae5ae92e85fd25e165d9">&#9670;&nbsp;</a></span>size_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Board::size_x </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return size in x axis </p><dl class="section return"><dt>Returns</dt><dd>width of the <a class="el" href="class_board.html">Board</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00024">24</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<div id="dynsection-10" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-10-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-10-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-10-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_board_aafb469dc3247ae5ae92e85fd25e165d9_icgraph.png" border="0" usemap="#aclass_board_aafb469dc3247ae5ae92e85fd25e165d9_icgraph" alt=""/></div>
+<map name="aclass_board_aafb469dc3247ae5ae92e85fd25e165d9_icgraph" id="aclass_board_aafb469dc3247ae5ae92e85fd25e165d9_icgraph">
+<area shape="rect" title=" " alt="" coords="201,56,303,83"/>
+<area shape="rect" href="class_board.html#ab2c117760cd2012e6cd67751069737e9" title=" " alt="" coords="16,5,143,32"/>
+<area shape="rect" href="class_game_of_life.html#a9064fe10359ba9a66360606f92cf35d8" title="This function is called on game start should be overrided by the deriving class." alt="" coords="5,56,153,83"/>
+<area shape="rect" href="class_game_of_life.html#a0a93590ec8cb61e8ac932ed860afdca8" title="render current_board_" alt="" coords="11,107,147,149"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a172ea330a3ed7482691ecdac894fe10b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172ea330a3ed7482691ecdac894fe10b">&#9670;&nbsp;</a></span>size_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t Board::size_y </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Return size in y axis </p><dl class="section return"><dt>Returns</dt><dd>height in y axis </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_board_8cc_source.html#l00028">28</a> of file <a class="el" href="_board_8cc_source.html">Board.cc</a>.</p>
+<div id="dynsection-11" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-11-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
+<div id="dynsection-11-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-11-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="class_board_a172ea330a3ed7482691ecdac894fe10b_icgraph.png" border="0" usemap="#aclass_board_a172ea330a3ed7482691ecdac894fe10b_icgraph" alt=""/></div>
+<map name="aclass_board_a172ea330a3ed7482691ecdac894fe10b_icgraph" id="aclass_board_a172ea330a3ed7482691ecdac894fe10b_icgraph">
+<area shape="rect" title=" " alt="" coords="201,56,303,83"/>
+<area shape="rect" href="class_board.html#ab2c117760cd2012e6cd67751069737e9" title=" " alt="" coords="16,5,143,32"/>
+<area shape="rect" href="class_game_of_life.html#a9064fe10359ba9a66360606f92cf35d8" title="This function is called on game start should be overrided by the deriving class." alt="" coords="5,56,153,83"/>
+<area shape="rect" href="class_game_of_life.html#a0a93590ec8cb61e8ac932ed860afdca8" title="render current_board_" alt="" coords="11,107,147,149"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -358,7 +855,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_board.html">Board</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Jun 14 2021 09:50:48 for Simple language by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

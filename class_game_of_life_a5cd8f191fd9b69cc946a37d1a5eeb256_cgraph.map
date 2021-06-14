@@ -1,0 +1,5 @@
+<map id="GameOfLife::on_tick" name="GameOfLife::on_tick">
+<area shape="rect" id="node1" title="This function will be invoked on every world tick should be ovverided by the derriving class." alt="" coords="5,31,148,57"/>
+<area shape="rect" id="node2" href="$class_board.html#adc481057427765313083fec52db56bf9" title=" " alt="" coords="196,5,349,32"/>
+<area shape="rect" id="node3" href="$class_board.html#aef56e7309b843fdb2906727dce21e74a" title="Return the size of the underlying array (width * height)" alt="" coords="229,56,316,83"/>
+</map>

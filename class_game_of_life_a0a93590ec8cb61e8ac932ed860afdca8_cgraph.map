@@ -1,0 +1,7 @@
+<map id="GameOfLife::render_current_board" name="GameOfLife::render_current_board">
+<area shape="rect" id="node1" title="render current_board_" alt="" coords="5,74,141,115"/>
+<area shape="rect" id="node2" href="$class_renderer.html#aa6b129fc84befe052eab82542aa88f61" title=" " alt="" coords="197,5,315,32"/>
+<area shape="rect" id="node3" href="$class_renderer.html#a997929e96cd42b01782a831dac275271" title=" " alt="" coords="189,56,323,83"/>
+<area shape="rect" id="node4" href="$class_board.html#aafb469dc3247ae5ae92e85fd25e165d9" title=" " alt="" coords="205,107,307,133"/>
+<area shape="rect" id="node5" href="$class_board.html#a172ea330a3ed7482691ecdac894fe10b" title=" " alt="" coords="205,157,307,184"/>
+</map>

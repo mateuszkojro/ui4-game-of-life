@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Game of life: Main Page</title>
+<title>Simple language: Game of life</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Game of life
+   <div id="projectname">Simple language
    </div>
   </td>
  </tr>
@@ -80,17 +80,79 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div class="header">
+<div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Game of life Documentation</div>  </div>
+<div class="title">Game of life </div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> Implementacja gry w życie Johna Conwaya</p>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Kod źródłowy</h2>
+<p><a href="https://github.com/mateuszkojro/ui4_game_of_life">https://github.com/mateuszkojro/ui4_game_of_life</a></p>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Dokumentacja</h2>
+<p><a href="https://mateuszkojro.github.io/ui4_game_of_life/">https://mateuszkojro.github.io/ui4_game_of_life/</a></p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Wymagania</h1>
+<p>Aby skompilowac projekt wymagany jest przynajmniej standerd <b>C++ 14</b></p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md5"></a>
+Budowa</h1>
+<p>Program sklada sie z:</p>
+<ul>
+<li>Interfejs prostego API silnika graficznego (<code><a class="el" href="_renderer_8h.html">Renderer.h</a></code>) i jego implementacja w postacji prostego renderera do wyswietlania w konsoli (<code><a class="el" href="_simple_console_renderer_8h.html">SimpleConsoleRenderer.h</a></code>)</li>
+<li>Interfejs prostego API silnika gier (<code><a class="el" href="_game_engine_8h.html">GameEngine.h</a></code>) i jego implementacja w postaci tematycznej Gry w zycie (<code><a class="el" href="_game_of_life_8h.html">GameOfLife.h</a></code>)</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Zalozenia</h1>
+<p>W zalozeniu kazda gra stworzona z pomoca API <code><a class="el" href="class_game_engine.html" title="Base class for custom game engines.">GameEngine</a></code> i <code><a class="el" href="class_renderer.html" title="Basic base class for all renderers.">Renderer</a></code> powinna umozliwiac w prosty sposob zmiane silnika implementacje silnika graficznego moze to byc osiagniete implementujac wszystkie funckcje interfejsu <code><a class="el" href="class_renderer.html" title="Basic base class for all renderers.">Renderer</a></code>. A nastepnie przekazujac wskaznik na instancje zaimplementowanego silnika do konfiguracji silnika gry np:</p>
+<div class="fragment"><div class="line"><a class="code" href="struct_game_engine_1_1_config.html">GameEngine::Config</a> config;</div>
+<div class="line">config.<a class="code" href="struct_game_engine_1_1_config.html#ad43a55612b1ae650dac1bcecbb38e076">renderer</a> = <span class="keyword">new</span> <a class="code" href="class_simple_console_renderer.html">SimpleConsoleRenderer</a>;</div>
+<div class="line"><a class="code" href="class_game_of_life.html">GameOfLife</a> game_of_life(board, config);</div>
+<div class="ttc" id="aclass_game_of_life_html"><div class="ttname"><a href="class_game_of_life.html">GameOfLife</a></div><div class="ttdoc">Implementation of the game of life.</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8h_source.html#l00018">GameOfLife.h:18</a></div></div>
+<div class="ttc" id="aclass_simple_console_renderer_html"><div class="ttname"><a href="class_simple_console_renderer.html">SimpleConsoleRenderer</a></div><div class="ttdef"><b>Definition:</b> <a href="_simple_console_renderer_8h_source.html#l00012">SimpleConsoleRenderer.h:12</a></div></div>
+<div class="ttc" id="astruct_game_engine_1_1_config_html"><div class="ttname"><a href="struct_game_engine_1_1_config.html">GameEngine::Config</a></div><div class="ttdoc">Config for game engines.</div><div class="ttdef"><b>Definition:</b> <a href="_game_engine_8h_source.html#l00025">GameEngine.h:25</a></div></div>
+<div class="ttc" id="astruct_game_engine_1_1_config_html_ad43a55612b1ae650dac1bcecbb38e076"><div class="ttname"><a href="struct_game_engine_1_1_config.html#ad43a55612b1ae650dac1bcecbb38e076">GameEngine::Config::renderer</a></div><div class="ttdeci">Renderer * renderer</div><div class="ttdef"><b>Definition:</b> <a href="_game_engine_8h_source.html#l00027">GameEngine.h:27</a></div></div>
+</div><!-- fragment --><p>gdzie <code><a class="el" href="class_simple_console_renderer.html">SimpleConsoleRenderer</a></code> to klasa dziedziczaca po <code><a class="el" href="class_renderer.html" title="Basic base class for all renderers.">Renderer</a></code></p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Mozliwa konfiguracja</h1>
+<p>Istnieje mozliwosc ustawienia poczatkowego stanu planszy za pomocą funkcjonalnosci udostepnionych przez klase <code><a class="el" href="class_board.html">Board</a></code>:</p>
+<ol type="1">
+<li>Zapisywanie i odczytywanie stanu planszy z pliku:</li>
+</ol>
+<div class="fragment"><div class="line">    <span class="comment">// mozemy otworzyc wczesniej zapisana plansze</span></div>
+<div class="line"><span class="keyword">const</span> <span class="keywordtype">char</span>[] PATH = <span class="stringliteral">&quot;saved_board.data&quot;</span>;</div>
+<div class="line"><span class="keyword">auto</span> saved_board = <a class="code" href="class_board.html#ab2c117760cd2012e6cd67751069737e9">Board::load_board</a>(PATH);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// ustawiamy komurke na adresie x=1, y=1 jako aktywna</span></div>
+<div class="line">saved_board(1, 1) = <span class="keyword">true</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// Zapisujemy wprowadzone dane</span></div>
+<div class="line"><a class="code" href="class_board.html#ab9d0f849f2c26927528ea54ce99057ab">Board::save_board</a>(saved_board, <span class="stringliteral">&quot;new_board.data&quot;</span>)</div>
+<div class="ttc" id="aclass_board_html_ab2c117760cd2012e6cd67751069737e9"><div class="ttname"><a href="class_board.html#ab2c117760cd2012e6cd67751069737e9">Board::load_board</a></div><div class="ttdeci">static Board load_board(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00082">Board.cc:82</a></div></div>
+<div class="ttc" id="aclass_board_html_ab9d0f849f2c26927528ea54ce99057ab"><div class="ttname"><a href="class_board.html#ab9d0f849f2c26927528ea54ce99057ab">Board::save_board</a></div><div class="ttdeci">static void save_board(const Board &amp;, const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00095">Board.cc:95</a></div></div>
+</div><!-- fragment --><ol type="1">
+<li>Ustawienie zawartosci planszy za pomoca tablicy wartosci boolowskich gdzie <code>true</code> znaczy ze komurka bedzie zywa a <code>false</code> ze martwa</li>
+</ol>
+<div class="fragment"><div class="line"><span class="keyword">const</span> size_x = 20, size_y = 20;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">auto</span> data = <span class="keyword">new</span> <span class="keywordtype">bool</span>[size_x * size_y];</div>
+<div class="line"> </div>
+<div class="line">memset(data, <span class="keyword">true</span>, size_x * size_y);</div>
+<div class="line"> </div>
+<div class="line">data[11] = <span class="keyword">true</span>;</div>
+<div class="line">data[12] = <span class="keyword">true</span>;</div>
+<div class="line">data[13] = <span class="keyword">true</span>;</div>
+<div class="line"> </div>
+<div class="line"><a class="code" href="class_board.html">Board</a> board(data, size_x, size_y);</div>
+<div class="ttc" id="aclass_board_html"><div class="ttname"><a href="class_board.html">Board</a></div><div class="ttdef"><b>Definition:</b> <a href="_board_8h_source.html#l00014">Board.h:14</a></div></div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Jun 14 2021 09:50:48 for Simple language by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -24,25 +24,40 @@
 */
 var NAVTREE =
 [
-  [ "Game of life", "index.html", [
+  [ "Simple language", "index.html", [
+    [ "Game of life", "index.html", [
+      [ "Wymagania", "index.html#autotoc_md3", null ],
+      [ "Budowa", "index.html#autotoc_md5", null ],
+      [ "Zalozenia", "index.html#autotoc_md6", null ],
+      [ "Mozliwa konfiguracja", "index.html#autotoc_md7", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_board_8cc_source.html"
+"_board_8cc.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

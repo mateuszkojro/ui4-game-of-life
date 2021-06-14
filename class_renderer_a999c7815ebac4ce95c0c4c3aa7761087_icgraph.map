@@ -1,0 +1,4 @@
+<map id="Renderer::show_text_small" name="Renderer::show_text_small">
+<area shape="rect" id="node1" title=" " alt="" coords="196,5,339,47"/>
+<area shape="rect" id="node2" href="$class_game_of_life.html#aaee58c263e51332cd4188183d1e34578" title="This function is called when the game ends should be ovverided by the derriving class." alt="" coords="5,13,148,39"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Board::fill" name="Board::fill">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,83,57"/>
+<area shape="rect" id="node2" href="$class_board.html#a651880af36910ad135629b737a6c8640" title=" " alt="" coords="131,5,249,32"/>
+<area shape="rect" id="node3" href="$class_board.html#aef56e7309b843fdb2906727dce21e74a" title="Return the size of the underlying array (width * height)" alt="" coords="147,56,233,83"/>
+</map>

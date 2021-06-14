@@ -1,0 +1,4 @@
+<map id="Board::get_neighbours" name="Board::get_neighbours">
+<area shape="rect" id="node1" title=" " alt="" coords="196,5,349,32"/>
+<area shape="rect" id="node2" href="$class_game_of_life.html#a5cd8f191fd9b69cc946a37d1a5eeb256" title="This function will be invoked on every world tick should be ovverided by the derriving class." alt="" coords="5,5,148,32"/>
+</map>

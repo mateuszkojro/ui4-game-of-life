@@ -1,5 +1,7 @@
 var annotated_dup =
 [
+    [ "Kod źródłowy", "index.html#autotoc_md1", null ],
+    [ "Dokumentacja", "index.html#autotoc_md2", null ],
     [ "Board", "class_board.html", "class_board" ],
     [ "Coord", "struct_coord.html", "struct_coord" ],
     [ "GameEngine", "class_game_engine.html", "class_game_engine" ],

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Game of life: Board.h Source File</title>
+<title>Simple language: Board.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Game of life
+   <div id="projectname">Simple language
    </div>
   </td>
  </tr>
@@ -85,7 +85,7 @@ $(document).ready(function(){initNavTree('_board_8h_source.html',''); initResiza
 <div class="title">Board.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<a href="_board_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by mateu on 4/1/2021.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
@@ -94,75 +94,89 @@ $(document).ready(function(){initNavTree('_board_8h_source.html',''); initResiza
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;array&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_board.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_board.html">Board</a> {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_board.html">Board</a>() = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_board.html#a3e11ce152fab26acaabf423f86edef2e">   17</a></span>&#160;    <a class="code" href="class_board.html#a3e11ce152fab26acaabf423f86edef2e">Board</a>() = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> &amp;<a class="code" href="class_board.html#a651880af36910ad135629b737a6c8640">operator()</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">bool</span> &amp;<a class="code" href="class_board.html#a651880af36910ad135629b737a6c8640">operator()</a>(<span class="keywordtype">int</span> i);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::array&lt;bool *, 9&gt; <a class="code" href="class_board.html#a31e0fed9e3b0107286f1b222c06895ac">get_neighbours</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::array&lt;bool *, 9&gt; <a class="code" href="class_board.html#a31e0fed9e3b0107286f1b222c06895ac">get_neighbours</a>(<span class="keywordtype">int</span> i);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_board.html">Board</a> <a class="code" href="class_board.html#ab2c117760cd2012e6cd67751069737e9">load_board</a>(<span class="keyword">const</span> std::string &amp;path);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a5c883a0d65a07e5b793f512e190719ac">fill</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> &amp;<a class="code" href="class_board.html#a651880af36910ad135629b737a6c8640">operator()</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> &amp;<a class="code" href="class_board.html#a651880af36910ad135629b737a6c8640">operator()</a>(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> &amp;<a class="code" href="class_board.html#a651880af36910ad135629b737a6c8640">operator()</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_board.html#ab9d0f849f2c26927528ea54ce99057ab">save_board</a>(<span class="keyword">const</span> <a class="code" href="class_board.html">Board</a> &amp;, <span class="keyword">const</span> std::string &amp;path);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="class_board.html#a948ba5964eec3765977e0fa054f98af2">get_size_x</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> &amp;<a class="code" href="class_board.html#a651880af36910ad135629b737a6c8640">operator()</a>(<span class="keywordtype">int</span> i) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    std::array&lt;bool, 9&gt; <a class="code" href="class_board.html#adc481057427765313083fec52db56bf9">get_neighbours</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="class_board.html#ae8ddd3ec38864ec3aab23cf342e54847">get_size_y</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> *<a class="code" href="class_board.html#aaf078610c0bed476147608f13f37d54b">get_board</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    std::array&lt;bool, 9&gt; <a class="code" href="class_board.html#adc481057427765313083fec52db56bf9">get_neighbours</a>(<span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_board.html">Board</a> <a class="code" href="class_board.html#ab2c117760cd2012e6cd67751069737e9">load_board</a>(<span class="keyword">const</span> std::string &amp;path);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="class_board.html">Board</a>(<span class="keywordtype">bool</span> *board, <span class="keywordtype">size_t</span> x, <span class="keywordtype">size_t</span> y);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_board.html#ab9d0f849f2c26927528ea54ce99057ab">save_board</a>(<span class="keyword">const</span> <a class="code" href="class_board.html">Board</a> &amp;, <span class="keyword">const</span> std::string &amp;path);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_board.html">Board</a>(<span class="keyword">const</span> <a class="code" href="class_board.html">Board</a> &amp;other);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_board.html">Board</a>(<a class="code" href="class_board.html">Board</a> &amp;&amp;other);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="class_board.html#aafb469dc3247ae5ae92e85fd25e165d9">size_x</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_board.html">Board</a> &amp;operator=(<span class="keyword">const</span> <a class="code" href="class_board.html">Board</a> &amp;);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">int</span> size() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="class_board.html#a172ea330a3ed7482691ecdac894fe10b">size_y</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_board.html">Board</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">size_t</span> translate_adress(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> copy(<span class="keyword">const</span> <a class="code" href="class_board.html">Board</a>&amp; other);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">size_t</span> size_x_;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">size_t</span> size_y_;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">bool</span> *<a class="code" href="class_board.html#aaf078610c0bed476147608f13f37d54b">get_board</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_board.html#a3e11ce152fab26acaabf423f86edef2e">Board</a>(<span class="keywordtype">bool</span> *board, <span class="keywordtype">size_t</span> x, <span class="keywordtype">size_t</span> y);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="class_board.html#a3e11ce152fab26acaabf423f86edef2e">Board</a>(<span class="keywordtype">size_t</span> x, <span class="keywordtype">size_t</span> y);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="class_board.html#a3e11ce152fab26acaabf423f86edef2e">Board</a>(<span class="keyword">const</span> <a class="code" href="class_board.html">Board</a> &amp;other);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="class_board.html#a3e11ce152fab26acaabf423f86edef2e">Board</a>(<a class="code" href="class_board.html">Board</a> &amp;&amp;other) noexcept;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="class_board.html">Board</a> &amp;<a class="code" href="class_board.html#a4554f8481e93b392dbc1c0ff0124a5f5">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_board.html">Board</a> &amp;);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">bool</span> *board_;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="class_board.html#aef56e7309b843fdb2906727dce21e74a">size</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_board.html#af73f45730119a1fd8f6670f53f959e68">~Board</a>();</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//GAME_OF_LIFE_BOARD_H</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">int</span> translate_adress(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> copy(<span class="keyword">const</span> <a class="code" href="class_board.html">Board</a> &amp;other);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">size_t</span> size_x_;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">size_t</span> size_y_;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">bool</span> *board_;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//GAME_OF_LIFE_BOARD_H</span></div>
 <div class="ttc" id="aclass_board_html"><div class="ttname"><a href="class_board.html">Board</a></div><div class="ttdef"><b>Definition:</b> <a href="_board_8h_source.html#l00014">Board.h:14</a></div></div>
-<div class="ttc" id="aclass_board_html_a31e0fed9e3b0107286f1b222c06895ac"><div class="ttname"><a href="class_board.html#a31e0fed9e3b0107286f1b222c06895ac">Board::get_neighbours</a></div><div class="ttdeci">std::array&lt; bool *, 9 &gt; get_neighbours(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00034">Board.cc:34</a></div></div>
-<div class="ttc" id="aclass_board_html_a651880af36910ad135629b737a6c8640"><div class="ttname"><a href="class_board.html#a651880af36910ad135629b737a6c8640">Board::operator()</a></div><div class="ttdeci">bool &amp; operator()(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00030">Board.cc:30</a></div></div>
-<div class="ttc" id="aclass_board_html_a948ba5964eec3765977e0fa054f98af2"><div class="ttname"><a href="class_board.html#a948ba5964eec3765977e0fa054f98af2">Board::get_size_x</a></div><div class="ttdeci">size_t get_size_x() const</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00018">Board.cc:18</a></div></div>
-<div class="ttc" id="aclass_board_html_aaf078610c0bed476147608f13f37d54b"><div class="ttname"><a href="class_board.html#aaf078610c0bed476147608f13f37d54b">Board::get_board</a></div><div class="ttdeci">bool * get_board() const</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00026">Board.cc:26</a></div></div>
-<div class="ttc" id="aclass_board_html_ab2c117760cd2012e6cd67751069737e9"><div class="ttname"><a href="class_board.html#ab2c117760cd2012e6cd67751069737e9">Board::load_board</a></div><div class="ttdeci">static Board load_board(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00042">Board.cc:42</a></div></div>
-<div class="ttc" id="aclass_board_html_ab9d0f849f2c26927528ea54ce99057ab"><div class="ttname"><a href="class_board.html#ab9d0f849f2c26927528ea54ce99057ab">Board::save_board</a></div><div class="ttdeci">static void save_board(const Board &amp;, const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00045">Board.cc:45</a></div></div>
-<div class="ttc" id="aclass_board_html_ae8ddd3ec38864ec3aab23cf342e54847"><div class="ttname"><a href="class_board.html#ae8ddd3ec38864ec3aab23cf342e54847">Board::get_size_y</a></div><div class="ttdeci">size_t get_size_y() const</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00022">Board.cc:22</a></div></div>
+<div class="ttc" id="aclass_board_html_a172ea330a3ed7482691ecdac894fe10b"><div class="ttname"><a href="class_board.html#a172ea330a3ed7482691ecdac894fe10b">Board::size_y</a></div><div class="ttdeci">size_t size_y() const</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00028">Board.cc:28</a></div></div>
+<div class="ttc" id="aclass_board_html_a3e11ce152fab26acaabf423f86edef2e"><div class="ttname"><a href="class_board.html#a3e11ce152fab26acaabf423f86edef2e">Board::Board</a></div><div class="ttdeci">Board()=delete</div></div>
+<div class="ttc" id="aclass_board_html_a4554f8481e93b392dbc1c0ff0124a5f5"><div class="ttname"><a href="class_board.html#a4554f8481e93b392dbc1c0ff0124a5f5">Board::operator=</a></div><div class="ttdeci">Board &amp; operator=(const Board &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00124">Board.cc:124</a></div></div>
+<div class="ttc" id="aclass_board_html_a5c883a0d65a07e5b793f512e190719ac"><div class="ttname"><a href="class_board.html#a5c883a0d65a07e5b793f512e190719ac">Board::fill</a></div><div class="ttdeci">void fill(bool value)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00032">Board.cc:32</a></div></div>
+<div class="ttc" id="aclass_board_html_a651880af36910ad135629b737a6c8640"><div class="ttname"><a href="class_board.html#a651880af36910ad135629b737a6c8640">Board::operator()</a></div><div class="ttdeci">bool &amp; operator()(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00152">Board.cc:152</a></div></div>
+<div class="ttc" id="aclass_board_html_aaf078610c0bed476147608f13f37d54b"><div class="ttname"><a href="class_board.html#aaf078610c0bed476147608f13f37d54b">Board::get_board</a></div><div class="ttdeci">bool * get_board() const</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00038">Board.cc:38</a></div></div>
+<div class="ttc" id="aclass_board_html_aafb469dc3247ae5ae92e85fd25e165d9"><div class="ttname"><a href="class_board.html#aafb469dc3247ae5ae92e85fd25e165d9">Board::size_x</a></div><div class="ttdeci">size_t size_x() const</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00024">Board.cc:24</a></div></div>
+<div class="ttc" id="aclass_board_html_ab2c117760cd2012e6cd67751069737e9"><div class="ttname"><a href="class_board.html#ab2c117760cd2012e6cd67751069737e9">Board::load_board</a></div><div class="ttdeci">static Board load_board(const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00082">Board.cc:82</a></div></div>
+<div class="ttc" id="aclass_board_html_ab9d0f849f2c26927528ea54ce99057ab"><div class="ttname"><a href="class_board.html#ab9d0f849f2c26927528ea54ce99057ab">Board::save_board</a></div><div class="ttdeci">static void save_board(const Board &amp;, const std::string &amp;path)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00095">Board.cc:95</a></div></div>
+<div class="ttc" id="aclass_board_html_adc481057427765313083fec52db56bf9"><div class="ttname"><a href="class_board.html#adc481057427765313083fec52db56bf9">Board::get_neighbours</a></div><div class="ttdeci">std::array&lt; bool, 9 &gt; get_neighbours(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00042">Board.cc:42</a></div></div>
+<div class="ttc" id="aclass_board_html_aef56e7309b843fdb2906727dce21e74a"><div class="ttname"><a href="class_board.html#aef56e7309b843fdb2906727dce21e74a">Board::size</a></div><div class="ttdeci">unsigned size() const</div><div class="ttdoc">Return the size of the underlying array (width * height)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00131">Board.cc:131</a></div></div>
+<div class="ttc" id="aclass_board_html_af73f45730119a1fd8f6670f53f959e68"><div class="ttname"><a href="class_board.html#af73f45730119a1fd8f6670f53f959e68">Board::~Board</a></div><div class="ttdeci">virtual ~Board()</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00019">Board.cc:19</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Board.h</b></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><a class="el" href="_board_8h.html">Board.h</a></li>
+    <li class="footer">Generated on Mon Jun 14 2021 09:50:48 for Simple language by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

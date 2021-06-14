@@ -1,0 +1,7 @@
+<map id="GameOfLife::play" name="GameOfLife::play">
+<area shape="rect" id="node1" title="start the game engine" alt="" coords="5,56,129,83"/>
+<area shape="rect" id="node2" href="$class_game_engine.html#ad0a8fdf4127a891e976b8d88e693f28a" title="game engine will start working" alt="" coords="177,56,355,83"/>
+<area shape="rect" id="node3" href="$class_game_engine.html#ab30d1764c6659eba50865e909ed6f3da" title="This function is called when the game ends should be ovverided by the derriving class." alt="" coords="406,5,553,32"/>
+<area shape="rect" id="node4" href="$class_game_engine.html#a368522a8a9391ba9dc89a86799c6176b" title="This function is called on game start should be overrided by the deriving class." alt="" coords="403,56,556,83"/>
+<area shape="rect" id="node5" href="$class_game_engine.html#a6936abd9f2ed9fdf1c183bc169b7c434" title="This function will be invoked on every world tick should be ovverided by the derriving class." alt="" coords="406,107,553,133"/>
+</map>

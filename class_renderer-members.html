@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Game of life: Member List</title>
+<title>Simple language: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Game of life
+   <div id="projectname">Simple language
    </div>
   </td>
  </tr>
@@ -91,16 +91,20 @@ $(document).ready(function(){initNavTree('class_renderer.html',''); initResizabl
   <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#a81392138fe1bed03fe1dd63d33319d7b">clear_screen</a>(const Color &amp;fill)=0</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_renderer.html#a2fcbbfc652a92884fbe562421bdf3195">create_window</a>(int size_x, int size_y)=0</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#a1eae5319b3fdf9029e54c90d9de454e7">draw_square</a>(const Coord &amp;position, int size_x, int size_y, const Color &amp;fill)=0</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>height_</b> (defined in <a class="el" href="class_renderer.html">Renderer</a>)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#a997929e96cd42b01782a831dac275271">set_pixel</a>(const Coord &amp;position, const Color &amp;fill)=0</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>width_</b> (defined in <a class="el" href="class_renderer.html">Renderer</a>)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Renderer</b>()=default (defined in <a class="el" href="class_renderer.html">Renderer</a>)</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#adc1dad1cf76ce33e90e59efc7dc9474d">height_</a></td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#aa6b129fc84befe052eab82542aa88f61">render</a>()=0</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#a997929e96cd42b01782a831dac275271">set_pixel</a>(const Coord &amp;position, const Color &amp;fill)=0</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#ac14ffe2ec0d23d62e122e266d21d64c1">show_text_big</a>(const Coord &amp;position, const std::string &amp;text)=0</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#aa4270c45781220f783d17d87655ea7f3">show_text_medium</a>(const Coord &amp;position, const std::string &amp;text)=0</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#a999c7815ebac4ce95c0c4c3aa7761087">show_text_small</a>(const Coord &amp;position, const std::string &amp;text)=0</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_renderer.html#a143ee55e93aa1b9d9c71040edf04816e">width_</a></td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_renderer.html#add2012f269f157754034e7b5475a8927">~Renderer</a>()=default</td><td class="entry"><a class="el" href="class_renderer.html">Renderer</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Mon Jun 14 2021 09:50:48 for Simple language by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Game of life: GameOfLife.cc Source File</title>
+<title>Simple language: GameOfLife.cc Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Game of life
+   <div id="projectname">Simple language
    </div>
   </td>
  </tr>
@@ -85,69 +85,158 @@ $(document).ready(function(){initNavTree('_game_of_life_8cc_source.html',''); in
 <div class="title">GameOfLife.cc</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<a href="_game_of_life_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by mateu on 3/24/2021.</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;GameOfLife.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> GameOfLife::play() {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_game_of_life_8h.html">GameOfLife.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;ostream&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_game_of_life.html#a5089f941dc986be8eec417165efbd33c">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_of_life.html#a5089f941dc986be8eec417165efbd33c">GameOfLife::set_activation_function</a>(<span class="keywordtype">bool</span> (*func)(<span class="keywordtype">bool</span>, <span class="keywordtype">int</span>)) {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    activation_func_ = func;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_game_of_life.html#a56e0a8740057ce27c5cbed8860c27328">   16</a></span>&#160;<a class="code" href="class_game_of_life.html#a56e0a8740057ce27c5cbed8860c27328">GameOfLife::~GameOfLife</a>() {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">delete</span> current_board_;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">delete</span> next_board_;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_game_of_life.html#a9064fe10359ba9a66360606f92cf35d8">   21</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_of_life.html#a9064fe10359ba9a66360606f92cf35d8">GameOfLife::on_start</a>() {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// Show a welcome screen and ready to go</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_game_of_life.html#a5cd8f191fd9b69cc946a37d1a5eeb256">   25</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_of_life.html#a5cd8f191fd9b69cc946a37d1a5eeb256">GameOfLife::on_tick</a>() {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// loop through all the active and inactive cells</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; current_board_-&gt;size(); ++i) {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// get neighbours for current cell</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">auto</span> neighbours = current_board_-&gt;<a class="code" href="class_board.html#a31e0fed9e3b0107286f1b222c06895ac">get_neighbours</a>(i);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        (*next_board_)(i) = activation_func_(</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="comment">// Whats the current state of the cell</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                (*next_board_)(i),</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="comment">// Count cells that are active around this cell</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                std::count(neighbours.begin(),</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                           neighbours.end(),</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                           <span class="keyword">true</span>));</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    swap_boards();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_game_of_life.html#aaee58c263e51332cd4188183d1e34578">   41</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_of_life.html#aaee58c263e51332cd4188183d1e34578">GameOfLife::on_end</a>() {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// Show some stats on exit</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> GameOfLife::swap_boards() {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_board.html">Board</a> *temp = current_board_;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    current_board_ = next_board_;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    next_board_ = temp;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> show_board(<span class="keyword">const</span> <a class="code" href="class_board.html">Board</a> &amp;board) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; board.<a class="code" href="class_board.html#aef56e7309b843fdb2906727dce21e74a">size</a>(); i++) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::cout &lt;&lt; board(i) &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_game_of_life.html#a822e5412210202b1baab31944e4e5e9c">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_of_life.html#a822e5412210202b1baab31944e4e5e9c">GameOfLife::play</a>() {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_game_engine.html#ad0a8fdf4127a891e976b8d88e693f28a">start_engine</a>();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_game_of_life.html#a5089f941dc986be8eec417165efbd33c">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_of_life.html#a5089f941dc986be8eec417165efbd33c">GameOfLife::set_activation_function</a>(<span class="keywordtype">bool</span> (*func)(<span class="keywordtype">bool</span>, <span class="keywordtype">int</span>)) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    activation_func_ = func;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_game_of_life.html#a56e0a8740057ce27c5cbed8860c27328">   26</a></span>&#160;<a class="code" href="class_game_of_life.html#a56e0a8740057ce27c5cbed8860c27328">GameOfLife::~GameOfLife</a>() {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">delete</span> current_board_;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">delete</span> next_board_;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    current_board_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    next_board_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_game_of_life.html#a9064fe10359ba9a66360606f92cf35d8">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_of_life.html#a9064fe10359ba9a66360606f92cf35d8">GameOfLife::on_start</a>() {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">// Show a welcome screen and ready to go</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_game_engine.html#af7c59089dce2c6387ed59d174f0b687e">renderer_</a>-&gt;<a class="code" href="class_renderer.html#a2fcbbfc652a92884fbe562421bdf3195">create_window</a>(current_board_-&gt;<a class="code" href="class_board.html#aafb469dc3247ae5ae92e85fd25e165d9">size_x</a>(),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                             current_board_-&gt;<a class="code" href="class_board.html#a172ea330a3ed7482691ecdac894fe10b">size_y</a>());</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">//    renderer_-&gt;clear_screen(Color::Black);</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//    renderer_-&gt;show_text_big(Coord{0, 0}, &quot;Gra&quot;);</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">//    renderer_-&gt;show_text_big(Coord{1, 0}, &quot;w&quot;);</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">//    renderer_-&gt;show_text_big(Coord{2, 0}, &quot;zycie&quot;);</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//    renderer_-&gt;render();</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">//    std::string text;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//    while (text != &quot;start&quot;) {</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">//        std::cin &gt;&gt; text;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//    }</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="class_game_engine.html#a44578dd27650faf3c1ca708d9fa96c07">start_game_loop</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_game_of_life.html#a0a93590ec8cb61e8ac932ed860afdca8">   50</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_of_life.html#a0a93590ec8cb61e8ac932ed860afdca8">GameOfLife::render_current_board</a>() {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; current_board_-&gt;<a class="code" href="class_board.html#aafb469dc3247ae5ae92e85fd25e165d9">size_x</a>(); x++) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; current_board_-&gt;<a class="code" href="class_board.html#a172ea330a3ed7482691ecdac894fe10b">size_y</a>(); y++) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="_renderer_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a> color;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordflow">if</span> ((*current_board_)(x, y))</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                color = <a class="code" href="_renderer_8h.html#ab87bacfdad76e61b9412d7124be44c1ca25a81701fbfa4a1efdf660a950c1d006">Color::White</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                color = <a class="code" href="_renderer_8h.html#ab87bacfdad76e61b9412d7124be44c1cae90dfb84e30edf611e326eeb04d680de">Color::Black</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="class_game_engine.html#af7c59089dce2c6387ed59d174f0b687e">renderer_</a>-&gt;<a class="code" href="class_renderer.html#a997929e96cd42b01782a831dac275271">set_pixel</a>(<a class="code" href="struct_coord.html">Coord</a>(x, y), color);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_game_engine.html#af7c59089dce2c6387ed59d174f0b687e">renderer_</a>-&gt;<a class="code" href="class_renderer.html#aa6b129fc84befe052eab82542aa88f61">render</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_game_of_life.html#a5cd8f191fd9b69cc946a37d1a5eeb256">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_of_life.html#a5cd8f191fd9b69cc946a37d1a5eeb256">GameOfLife::on_tick</a>() {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">// loop through all the active and inactive cells</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; current_board_-&gt;<a class="code" href="class_board.html#aef56e7309b843fdb2906727dce21e74a">size</a>(); ++i) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">// get neighbours for current cell</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">auto</span> neighbours = current_board_-&gt;<a class="code" href="class_board.html#adc481057427765313083fec52db56bf9">get_neighbours</a>(i);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="comment">// make a cell alive if activation function determines so</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">bool</span> value = activation_func_(</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">// Whats the current state of the cell</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        (*next_board_)(i),</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">// Count cells that are active around this cell</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        std::count(neighbours.begin(), neighbours.end(), <span class="keyword">true</span>));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#if DEBUG</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    std::printf(<span class="stringliteral">&quot;Value at cell %d is %d input was (%lld)\n&quot;</span>, i, value,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                std::count(neighbours.begin(), neighbours.end(), <span class="keyword">true</span>));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    (*next_board_)(i) = value;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#if DEBUG</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> tick = 0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  std::printf(<span class="stringliteral">&quot;Tick %d\n&quot;</span>, tick++);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  std::printf(<span class="stringliteral">&quot;Current board\n&quot;</span>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  show_board(*current_board_);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  std::printf(<span class="stringliteral">&quot;\nNext board\n&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  show_board(*next_board_);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  std::printf(<span class="stringliteral">&quot;\n\n&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="class_game_of_life.html#a0a93590ec8cb61e8ac932ed860afdca8">render_current_board</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="class_board.html">Board</a> temp = *next_board_;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  *next_board_ = *current_board_;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  *current_board_ = temp;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="class_game_of_life.html#aaee58c263e51332cd4188183d1e34578">  103</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_game_of_life.html#aaee58c263e51332cd4188183d1e34578">GameOfLife::on_end</a>() {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">// Show some stats on exit</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="class_game_engine.html#af7c59089dce2c6387ed59d174f0b687e">renderer_</a>-&gt;<a class="code" href="class_renderer.html#a999c7815ebac4ce95c0c4c3aa7761087">show_text_small</a>(<a class="code" href="struct_coord.html">Coord</a>(0, 0), <span class="stringliteral">&quot;Dziekuje!&quot;</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="_game_of_life_8cc.html#ad3576a5a474b144eb82b5c4725dde941">  112</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_game_of_life_8cc.html#ad3576a5a474b144eb82b5c4725dde941">conway_activation</a>(<span class="keywordtype">bool</span> is_alive, <span class="keywordtype">int</span> no_neighbours) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span> (is_alive) {</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">if</span> (no_neighbours == 2 || no_neighbours == 3)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">if</span> (no_neighbours == 3)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="ttc" id="a_game_of_life_8cc_html_ad3576a5a474b144eb82b5c4725dde941"><div class="ttname"><a href="_game_of_life_8cc.html#ad3576a5a474b144eb82b5c4725dde941">conway_activation</a></div><div class="ttdeci">bool conway_activation(bool is_alive, int no_neighbours)</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00112">GameOfLife.cc:112</a></div></div>
+<div class="ttc" id="a_game_of_life_8h_html"><div class="ttname"><a href="_game_of_life_8h.html">GameOfLife.h</a></div></div>
+<div class="ttc" id="a_renderer_8h_html_ab87bacfdad76e61b9412d7124be44c1c"><div class="ttname"><a href="_renderer_8h.html#ab87bacfdad76e61b9412d7124be44c1c">Color</a></div><div class="ttdeci">Color</div><div class="ttdoc">Colors used in renderer.</div><div class="ttdef"><b>Definition:</b> <a href="_renderer_8h_source.html#l00020">Renderer.h:20</a></div></div>
+<div class="ttc" id="a_renderer_8h_html_ab87bacfdad76e61b9412d7124be44c1ca25a81701fbfa4a1efdf660a950c1d006"><div class="ttname"><a href="_renderer_8h.html#ab87bacfdad76e61b9412d7124be44c1ca25a81701fbfa4a1efdf660a950c1d006">Color::White</a></div><div class="ttdeci">@ White</div></div>
+<div class="ttc" id="a_renderer_8h_html_ab87bacfdad76e61b9412d7124be44c1cae90dfb84e30edf611e326eeb04d680de"><div class="ttname"><a href="_renderer_8h.html#ab87bacfdad76e61b9412d7124be44c1cae90dfb84e30edf611e326eeb04d680de">Color::Black</a></div><div class="ttdeci">@ Black</div></div>
 <div class="ttc" id="aclass_board_html"><div class="ttname"><a href="class_board.html">Board</a></div><div class="ttdef"><b>Definition:</b> <a href="_board_8h_source.html#l00014">Board.h:14</a></div></div>
-<div class="ttc" id="aclass_board_html_a31e0fed9e3b0107286f1b222c06895ac"><div class="ttname"><a href="class_board.html#a31e0fed9e3b0107286f1b222c06895ac">Board::get_neighbours</a></div><div class="ttdeci">std::array&lt; bool *, 9 &gt; get_neighbours(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00034">Board.cc:34</a></div></div>
-<div class="ttc" id="aclass_game_of_life_html_a5089f941dc986be8eec417165efbd33c"><div class="ttname"><a href="class_game_of_life.html#a5089f941dc986be8eec417165efbd33c">GameOfLife::set_activation_function</a></div><div class="ttdeci">void set_activation_function(bool(*func)(bool, int))</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00012">GameOfLife.cc:12</a></div></div>
-<div class="ttc" id="aclass_game_of_life_html_a56e0a8740057ce27c5cbed8860c27328"><div class="ttname"><a href="class_game_of_life.html#a56e0a8740057ce27c5cbed8860c27328">GameOfLife::~GameOfLife</a></div><div class="ttdeci">~GameOfLife() override</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00016">GameOfLife.cc:16</a></div></div>
-<div class="ttc" id="aclass_game_of_life_html_a5cd8f191fd9b69cc946a37d1a5eeb256"><div class="ttname"><a href="class_game_of_life.html#a5cd8f191fd9b69cc946a37d1a5eeb256">GameOfLife::on_tick</a></div><div class="ttdeci">void on_tick() override</div><div class="ttdoc">This function will be invoked on every world tick should be ovverided by the derriving class.</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00025">GameOfLife.cc:25</a></div></div>
-<div class="ttc" id="aclass_game_of_life_html_a9064fe10359ba9a66360606f92cf35d8"><div class="ttname"><a href="class_game_of_life.html#a9064fe10359ba9a66360606f92cf35d8">GameOfLife::on_start</a></div><div class="ttdeci">void on_start() override</div><div class="ttdoc">This function is called on game start should be ovverided by the derriving class.</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00021">GameOfLife.cc:21</a></div></div>
-<div class="ttc" id="aclass_game_of_life_html_aaee58c263e51332cd4188183d1e34578"><div class="ttname"><a href="class_game_of_life.html#aaee58c263e51332cd4188183d1e34578">GameOfLife::on_end</a></div><div class="ttdeci">void on_end() override</div><div class="ttdoc">This function is called when the game ends should be ovverided by the derriving class.</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00041">GameOfLife.cc:41</a></div></div>
+<div class="ttc" id="aclass_board_html_a172ea330a3ed7482691ecdac894fe10b"><div class="ttname"><a href="class_board.html#a172ea330a3ed7482691ecdac894fe10b">Board::size_y</a></div><div class="ttdeci">size_t size_y() const</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00028">Board.cc:28</a></div></div>
+<div class="ttc" id="aclass_board_html_aafb469dc3247ae5ae92e85fd25e165d9"><div class="ttname"><a href="class_board.html#aafb469dc3247ae5ae92e85fd25e165d9">Board::size_x</a></div><div class="ttdeci">size_t size_x() const</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00024">Board.cc:24</a></div></div>
+<div class="ttc" id="aclass_board_html_adc481057427765313083fec52db56bf9"><div class="ttname"><a href="class_board.html#adc481057427765313083fec52db56bf9">Board::get_neighbours</a></div><div class="ttdeci">std::array&lt; bool, 9 &gt; get_neighbours(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00042">Board.cc:42</a></div></div>
+<div class="ttc" id="aclass_board_html_aef56e7309b843fdb2906727dce21e74a"><div class="ttname"><a href="class_board.html#aef56e7309b843fdb2906727dce21e74a">Board::size</a></div><div class="ttdeci">unsigned size() const</div><div class="ttdoc">Return the size of the underlying array (width * height)</div><div class="ttdef"><b>Definition:</b> <a href="_board_8cc_source.html#l00131">Board.cc:131</a></div></div>
+<div class="ttc" id="aclass_game_engine_html_a44578dd27650faf3c1ca708d9fa96c07"><div class="ttname"><a href="class_game_engine.html#a44578dd27650faf3c1ca708d9fa96c07">GameEngine::start_game_loop</a></div><div class="ttdeci">void start_game_loop()</div><div class="ttdoc">start main game loop - now every frame on_tick() will be called</div><div class="ttdef"><b>Definition:</b> <a href="_game_engine_8h_source.html#l00070">GameEngine.h:70</a></div></div>
+<div class="ttc" id="aclass_game_engine_html_ad0a8fdf4127a891e976b8d88e693f28a"><div class="ttname"><a href="class_game_engine.html#ad0a8fdf4127a891e976b8d88e693f28a">GameEngine::start_engine</a></div><div class="ttdeci">virtual void start_engine() final</div><div class="ttdoc">game engine will start working</div><div class="ttdef"><b>Definition:</b> <a href="_game_engine_8h_source.html#l00039">GameEngine.h:39</a></div></div>
+<div class="ttc" id="aclass_game_engine_html_af7c59089dce2c6387ed59d174f0b687e"><div class="ttname"><a href="class_game_engine.html#af7c59089dce2c6387ed59d174f0b687e">GameEngine::renderer_</a></div><div class="ttdeci">Renderer * renderer_</div><div class="ttdef"><b>Definition:</b> <a href="_game_engine_8h_source.html#l00075">GameEngine.h:75</a></div></div>
+<div class="ttc" id="aclass_game_of_life_html_a0a93590ec8cb61e8ac932ed860afdca8"><div class="ttname"><a href="class_game_of_life.html#a0a93590ec8cb61e8ac932ed860afdca8">GameOfLife::render_current_board</a></div><div class="ttdeci">void render_current_board()</div><div class="ttdoc">render current_board_</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00050">GameOfLife.cc:50</a></div></div>
+<div class="ttc" id="aclass_game_of_life_html_a5089f941dc986be8eec417165efbd33c"><div class="ttname"><a href="class_game_of_life.html#a5089f941dc986be8eec417165efbd33c">GameOfLife::set_activation_function</a></div><div class="ttdeci">void set_activation_function(bool(*func)(bool, int))</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00022">GameOfLife.cc:22</a></div></div>
+<div class="ttc" id="aclass_game_of_life_html_a56e0a8740057ce27c5cbed8860c27328"><div class="ttname"><a href="class_game_of_life.html#a56e0a8740057ce27c5cbed8860c27328">GameOfLife::~GameOfLife</a></div><div class="ttdeci">~GameOfLife() override</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00026">GameOfLife.cc:26</a></div></div>
+<div class="ttc" id="aclass_game_of_life_html_a5cd8f191fd9b69cc946a37d1a5eeb256"><div class="ttname"><a href="class_game_of_life.html#a5cd8f191fd9b69cc946a37d1a5eeb256">GameOfLife::on_tick</a></div><div class="ttdeci">void on_tick() override</div><div class="ttdoc">This function will be invoked on every world tick should be ovverided by the derriving class.</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00065">GameOfLife.cc:65</a></div></div>
+<div class="ttc" id="aclass_game_of_life_html_a822e5412210202b1baab31944e4e5e9c"><div class="ttname"><a href="class_game_of_life.html#a822e5412210202b1baab31944e4e5e9c">GameOfLife::play</a></div><div class="ttdeci">void play()</div><div class="ttdoc">start the game engine</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00018">GameOfLife.cc:18</a></div></div>
+<div class="ttc" id="aclass_game_of_life_html_a9064fe10359ba9a66360606f92cf35d8"><div class="ttname"><a href="class_game_of_life.html#a9064fe10359ba9a66360606f92cf35d8">GameOfLife::on_start</a></div><div class="ttdeci">void on_start() override</div><div class="ttdoc">This function is called on game start should be overrided by the deriving class.</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00033">GameOfLife.cc:33</a></div></div>
+<div class="ttc" id="aclass_game_of_life_html_aaee58c263e51332cd4188183d1e34578"><div class="ttname"><a href="class_game_of_life.html#aaee58c263e51332cd4188183d1e34578">GameOfLife::on_end</a></div><div class="ttdeci">void on_end() override</div><div class="ttdoc">This function is called when the game ends should be ovverided by the derriving class.</div><div class="ttdef"><b>Definition:</b> <a href="_game_of_life_8cc_source.html#l00103">GameOfLife.cc:103</a></div></div>
+<div class="ttc" id="aclass_renderer_html_a2fcbbfc652a92884fbe562421bdf3195"><div class="ttname"><a href="class_renderer.html#a2fcbbfc652a92884fbe562421bdf3195">Renderer::create_window</a></div><div class="ttdeci">virtual void create_window(int size_x, int size_y)=0</div><div class="ttdoc">Creates window of given size.</div></div>
+<div class="ttc" id="aclass_renderer_html_a997929e96cd42b01782a831dac275271"><div class="ttname"><a href="class_renderer.html#a997929e96cd42b01782a831dac275271">Renderer::set_pixel</a></div><div class="ttdeci">virtual void set_pixel(const Coord &amp;position, const Color &amp;fill)=0</div></div>
+<div class="ttc" id="aclass_renderer_html_a999c7815ebac4ce95c0c4c3aa7761087"><div class="ttname"><a href="class_renderer.html#a999c7815ebac4ce95c0c4c3aa7761087">Renderer::show_text_small</a></div><div class="ttdeci">virtual void show_text_small(const Coord &amp;position, const std::string &amp;text)=0</div></div>
+<div class="ttc" id="aclass_renderer_html_aa6b129fc84befe052eab82542aa88f61"><div class="ttname"><a href="class_renderer.html#aa6b129fc84befe052eab82542aa88f61">Renderer::render</a></div><div class="ttdeci">virtual void render()=0</div></div>
+<div class="ttc" id="astruct_coord_html"><div class="ttname"><a href="struct_coord.html">Coord</a></div><div class="ttdoc">Struct containing coordinates of different objects.</div><div class="ttdef"><b>Definition:</b> <a href="_renderer_8h_source.html#l00011">Renderer.h:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>GameOfLife.cc</b></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="navelem"><a class="el" href="_game_of_life_8cc.html">GameOfLife.cc</a></li>
+    <li class="footer">Generated on Mon Jun 14 2021 09:50:48 for Simple language by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
