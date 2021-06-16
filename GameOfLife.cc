@@ -10,7 +10,7 @@
 
 static void show_board(const Board &board) {
   for (int i = 0; i < board.size(); i++) {
-    std::cout << board(i) << " ";
+	std::cout << board(i) << " ";
   }
 }
 
@@ -45,15 +45,15 @@ void GameOfLife::on_start() {
 
 void GameOfLife::render_current_board() {
   for (int x = 0; x < current_board_->size_x(); x++) {
-    for (int y = 0; y < current_board_->size_y(); y++) {
-      Color color;
-      if ((*current_board_)(x, y))
-        color = Color::White;
-      else
-        color = Color::Black;
+	for (int y = 0; y < current_board_->size_y(); y++) {
+	  Color color;
+	  if ((*current_board_)(x, y))
+		color = Color::White;
+	  else
+		color = Color::Black;
 
-      renderer_->set_pixel(Coord(x, y), color);
-    }
+	  renderer_->set_pixel(Coord(x, y), color);
+	}
   }
   renderer_->render();
 }
@@ -61,21 +61,21 @@ void GameOfLife::render_current_board() {
 void GameOfLife::on_tick() {
   // loop through all the active and inactive cells
   for (int i = 0; i < current_board_->size(); ++i) {
-    // get neighbours for current cell
-    auto neighbours = current_board_->get_neighbours(i);
-    // make a cell alive if activation function determines so
-    bool value = activation_func_(
-        // Whats the current state of the cell
-        (*next_board_)(i),
-        // Count cells that are active around this cell
-        std::count(neighbours.begin(), neighbours.end(), true));
+	// get neighbours for current cell
+	auto neighbours = current_board_->get_neighbours(i);
+	// make a cell alive if activation function determines so
+	bool value = activation_func_(
+		// Whats the current state of the cell
+		(*next_board_)(i),
+		// Count cells that are active around this cell
+		std::count(neighbours.begin(), neighbours.end(), true));
 
 #if DEBUG
-    std::printf("Value at cell %d is %d input was (%lld)\n", i, value,
-                std::count(neighbours.begin(), neighbours.end(), true));
+	std::printf("Value at cell %d is %d input was (%lld)\n", i, value,
+				std::count(neighbours.begin(), neighbours.end(), true));
 #endif
 
-    (*next_board_)(i) = value;
+	(*next_board_)(i) = value;
   }
 
 #if DEBUG
@@ -106,14 +106,14 @@ void GameOfLife::on_end() {
 /// \return should the cell be alive or not
 bool conway_activation(bool is_alive, int no_neighbours) {
   if (is_alive) {
-    if (no_neighbours == 2 || no_neighbours == 3)
-      return true;
-    else
-      return false;
+	if (no_neighbours == 2 || no_neighbours == 3)
+	  return true;
+	else
+	  return false;
   } else {
-    if (no_neighbours == 3)
-      return true;
-    else
-      return false;
+	if (no_neighbours == 3)
+	  return true;
+	else
+	  return false;
   }
 }

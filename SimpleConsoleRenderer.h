@@ -17,7 +17,7 @@ class SimpleConsoleRenderer : public Renderer {
   void create_window(int size_x, int size_y) override;
 
   void draw_square(const Coord &position, int size_x, int size_y,
-                   const Color &fill) override;
+				   const Color &fill) override;
 
   void clear_screen(const Color &fill) override;
 
@@ -26,7 +26,7 @@ class SimpleConsoleRenderer : public Renderer {
   void show_text_big(const Coord &position, const std::string &text) override;
 
   void show_text_medium(const Coord &position,
-                        const std::string &text) override;
+						const std::string &text) override;
 
   void show_text_small(const Coord &position, const std::string &text) override;
 
@@ -34,10 +34,10 @@ class SimpleConsoleRenderer : public Renderer {
 
   ~SimpleConsoleRenderer() override = default;
 
-private:
+ private:
   void clear_window();
 
   GrayscalePixel *video_buffer_;
 };
 
-#endif // GAME_OF_LIFE_SIMPLECONSOLERENDERER_H
+#endif// GAME_OF_LIFE_SIMPLECONSOLERENDERER_H

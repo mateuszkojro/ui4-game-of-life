@@ -16,12 +16,12 @@ bool conway_activation(bool is_alive, int no_neighbours);
 
 /// \brief Implementation of the game of life
 class GameOfLife : public GameEngine {
-public:
+ public:
   explicit GameOfLife(const Board &board, const Config &config)
-      : GameEngine(config), activation_func_(conway_activation) {
+	  : GameEngine(config), activation_func_(conway_activation) {
 
-    current_board_ = new Board(board);
-    next_board_ = new Board(board);
+	current_board_ = new Board(board);
+	next_board_ = new Board(board);
   };
 
   GameOfLife(const GameOfLife &) = delete;
@@ -45,14 +45,14 @@ public:
   /// alive (int) how many neighbours it has
   ~GameOfLife() override;
 
-protected:
+ protected:
   void on_start() override;
 
   void on_tick() override;
 
   void on_end() override;
 
-private:
+ private:
   /// \brief board that is currently shown on the screen
   Board *current_board_;
   /// \brief board that will be shown on the next tick
@@ -62,4 +62,4 @@ private:
   bool (*activation_func_)(bool, int);
 };
 
-#endif // GAME_OF_LIFE_GAMEOFLIFE_H
+#endif// GAME_OF_LIFE_GAMEOFLIFE_H

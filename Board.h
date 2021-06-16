@@ -12,7 +12,7 @@
 /// Class containing board (bool array) with functions useful for
 /// the implementation of the game of life
 class Board {
-public:
+ public:
   Board() = delete;
 
   /// Fils the board wirh specified value
@@ -68,7 +68,7 @@ public:
   /// \return ptr to bool array containing board data
   bool *get_board() const;
 
-public:
+ public:
   Board(bool *board, size_t x, size_t y);
 
   Board(size_t x, size_t y);
@@ -84,7 +84,7 @@ public:
 
   virtual ~Board();
 
-private:
+ private:
   /// Internal: Translate from x y coordinates to one dimensional arr
   /// \param x x coordinate
   /// \param y y coordinate
@@ -102,4 +102,4 @@ private:
   bool *board_;
 };
 
-#endif // GAME_OF_LIFE_BOARD_H
+#endif// GAME_OF_LIFE_BOARD_H

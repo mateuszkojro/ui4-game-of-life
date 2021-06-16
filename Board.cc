@@ -25,7 +25,7 @@ size_t Board::size_y() const { return size_y_; }
 
 void Board::fill(bool value) {
   for (int i = 0; i < size(); i++) {
-    operator()(i) = value;
+	operator()(i) = value;
   }
 }
 
@@ -48,22 +48,22 @@ std::array<bool, 9> Board::get_neighbours(int i) {
   int itr = 0;
 
   for (int y = -1; y <= 1; y++) {
-    for (int x = -1; x <= 1; x++) {
+	for (int x = -1; x <= 1; x++) {
 
-      // transform to position on the board
-      int board_x = pos_x + x;
-      int board_y = pos_y + y;
-      int board_i = translate_adress(board_x, board_y);
+	  // transform to position on the board
+	  int board_x = pos_x + x;
+	  int board_y = pos_y + y;
+	  int board_i = translate_adress(board_x, board_y);
 
-      bool is_target = (board_x == pos_x) && (board_y == pos_y);
-      bool is_valid = (board_i != -1);
+	  bool is_target = (board_x == pos_x) && (board_y == pos_y);
+	  bool is_valid = (board_i != -1);
 
-      if (!is_target && is_valid) {
-        result[itr++] = board_[board_i];
-      } else {
-        result[itr++] = false;
-      }
-    }
+	  if (!is_target && is_valid) {
+		result[itr++] = board_[board_i];
+	  } else {
+		result[itr++] = false;
+	  }
+	}
   }
 
   return result;
@@ -77,7 +77,7 @@ Board Board::load_board(const std::string &path) {
   file >> size_x >> size_y;
   bool *board = new bool[size_y * size_x];
   for (int i = 0; i < size_x * size_y; ++i) {
-    file >> board[i];
+	file >> board[i];
   }
   return Board(board, size_x, size_y);
 }
@@ -88,7 +88,7 @@ void Board::save_board(const Board &board, const std::string &path) {
   file << board.size_x_;
   file << board.size_y_;
   for (int i = 0; i < board.size(); ++i) {
-    file << board(i);
+	file << board(i);
   }
 }
 
@@ -111,7 +111,7 @@ Board::Board(Board &&other) noexcept {
 
 Board &Board::operator=(const Board &other) {
   if (this == &other)
-    return *this;
+	return *this;
   copy(other);
   return *this;
 }
@@ -120,13 +120,13 @@ unsigned Board::size() const { return size_x_ * size_y_; }
 
 int Board::translate_adress(int x, int y) const {
   if (y >= size_y_)
-    return -1;
+	return -1;
   if (x >= size_x_)
-    return -1;
+	return -1;
   if (x < 0)
-    return -1;
+	return -1;
   if (y < 0)
-    return -1;
+	return -1;
 
   return y * size_x_ + x;
 }
